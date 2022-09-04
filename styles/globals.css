@@ -8,9 +8,27 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: black;
+  bottom: 100px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: red;
 }

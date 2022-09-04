@@ -1,14 +1,18 @@
 import Link from "next/link";
 import React from "react";
-import { VscGithubInverted } from "react-icons/vsc";
-import { IoLogoFacebook } from "react-icons/io";
 import { SiFacebook, SiInstagram } from "react-icons/si";
+import { VscGithubInverted } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
-    <div className="flex justify-evenly h-screen items-center">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="flex justify-evenly h-screen items-center lg:w-[1500px]"
+    >
       <div className="lg:w-[800px] relative">
-        <p className="text-2xl">
+        <div className="text-2xl">
           Hy!{" "}
           <span className="border-b-2 border-indigo-500 italic font-[700]">
             Mình là Sang
@@ -24,7 +28,7 @@ const HomePage = () => {
           <figure className="inline-block absolute translate-y-[-5px] ">
             <img className="w-[50px]" src="./medal.png" />
           </figure>
-        </p>
+        </div>
       </div>
 
       <div>
@@ -32,39 +36,27 @@ const HomePage = () => {
         <ul className="flex flex-col text-[20px] gap-3 opacity-80">
           <li className="flex items-center gap-2">
             <VscGithubInverted size="25px" />
-            <a
-              className="flex"
-              href="https://github.com/hSangg"
-              target="noopener"
-            >
-              hSangg
-            </a>
+            <Link href="https://github.com/hSangg">
+              <a target="_blank">hSangg</a>
+            </Link>
           </li>
 
           <li className="flex items-center gap-2">
             <SiFacebook size="25px" />
-            <a
-              className="flex"
-              href="https://github.com/hSangg"
-              target="noopener"
-            >
-              Sang_Hoai
-            </a>
+            <Link href="https://github.com/hSangg">
+              <a target="_blank">Sang_Hoai</a>
+            </Link>
           </li>
 
           <li className="flex items-center gap-2">
             <SiInstagram size="25px" />
-            <a
-              className="flex"
-              href="https://www.instagram.com/h_sanggg/"
-              target="noopener"
-            >
-              h_sanggg
-            </a>
+            <Link href="https://www.instagram.com/h_sanggg/">
+              <a target="_blank">h_sanggg</a>
+            </Link>
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
