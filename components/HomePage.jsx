@@ -35,7 +35,7 @@ const HomePage = () => {
             <a
               className="flex"
               href="https://github.com/hSangg"
-              target="_blank"
+              target="noopener"
             >
               hSangg
             </a>
@@ -46,7 +46,7 @@ const HomePage = () => {
             <a
               className="flex"
               href="https://github.com/hSangg"
-              target="_blank"
+              target="noopener"
             >
               Sang_Hoai
             </a>
@@ -57,7 +57,7 @@ const HomePage = () => {
             <a
               className="flex"
               href="https://www.instagram.com/h_sanggg/"
-              target="_blank"
+              target="noopener"
             >
               h_sanggg
             </a>
