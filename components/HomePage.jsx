@@ -9,7 +9,7 @@ const HomePage = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="flex justify-evenly h-screen items-center lg:w-[1500px]"
+      className="flex justify-evenly h-screen items-center"
     >
       <div className="lg:w-[800px] relative">
         <div className="text-2xl">
@@ -22,9 +22,8 @@ const HomePage = () => {
           một nơi mà mình nhận lại những kiến thức có thể phục vụ cho
           nghề nghiệp tương lai của mình . Mình là người hướng ngoại
           và khá thích đi ra ngoài với bạn bè. Đây sẽ là nơi mà mình
-          chia sẽ về bản thân{" "}
-          <span className="text-green-500">-</span> 1 website mình xây
-          dựng lúc rảnh <span>.-. </span>
+          chia sẽ <span className="text-green-500">-</span> về những
+          thứ xung quanh mình <span>.-. </span>
           <figure className="inline-block absolute translate-y-[-5px] ">
             <img className="w-[50px]" src="./medal.png" />
           </figure>
