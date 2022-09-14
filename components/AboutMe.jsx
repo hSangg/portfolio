@@ -1,23 +1,6 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
-
-const textAnimate = {
-  offscreen: { y: 100, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
-
-const imgAnimate = {
-  offscreen: { scale: 0, opacity: 0 },
-  onscreen: {
-    scale: 1,
-    opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
+import { imgAnimate, textAnimate } from "../util/framer_motion";
 
 const AboutMe = () => {
   return (
@@ -26,13 +9,13 @@ const AboutMe = () => {
       whileInView={"onscreen"}
       viewport={{ once: false, amount: 1 }}
       transition={{ staggerChildren: 0.5 }}
-      className=" text-white relative"
+      className=" text-white relative mb-[200px]"
     >
       <motion.h1
         variants={textAnimate}
         className="text-white text-5xl text-left mb-5 font-bold"
       >
-        Sang muốn viết gì ?
+        Một vài nét về mình ._.
       </motion.h1>
 
       <motion.h1
@@ -51,13 +34,7 @@ const AboutMe = () => {
         từng sống những lúc khó khăn như nào.
       </motion.h1>
 
-      <motion.h1 variants={textAnimate} className="text-white">
-        Thiết kế
-      </motion.h1>
-
       <motion.figure
-        // initial={"offscreen"}
-        // whileInView={"onscreen"}
         variants={imgAnimate}
         className="w-[500px] absolute top-[-250px] right-[-50px]"
       >

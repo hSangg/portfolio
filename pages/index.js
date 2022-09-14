@@ -4,6 +4,7 @@ import AboutMe from "../components/AboutMe";
 import HomePage from "../components/HomePage";
 import { use } from "framer-motion";
 import { useFollowPointer } from "../useHooks/useFollowPointer";
+import ILiveInDormitory from "../components/ILiveInDormitory";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -33,6 +34,7 @@ export default function Home() {
           <div className="lg:w-[1500px]">
             <HomePage />
             <AboutMe />
+            <ILiveInDormitory />
           </div>
         </div>
       </div>
