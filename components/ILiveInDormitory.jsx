@@ -1,10 +1,9 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import {
-  imgAnimate,
   imgAnimate_1,
-  textAnimate,
   textAnimate_1,
+  textAnimate_2,
 } from "../util/framer_motion";
 
 const ILiveInDormitory = () => {
@@ -20,12 +19,22 @@ const ILiveInDormitory = () => {
       </motion.div>
 
       <motion.div className="flex">
-        <motion.div className="mr-[auto] text-2xl">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Omnis fuga, vel cumque atque possimus maxime aliquid unde
-          earum minus quam enim delectus molestiae non consequatur
-          commodi ea quod a. Debitis!
+        <motion.div className="mr-[auto] text-2xl w-[1500px] mt-5">
+          <motion.p variants={textAnimate_2}>
+            {" "}
+            Mình chọn ở kí túc xá một phần là vì nó rẻ, phần còn lại
+            là mình rất ham dui. Được nghe review là nếu thời sinh
+            viên mà chưa từng ở kí túc xá thì đã mất đi 50% thanh xuân
+            rồi
+          </motion.p>
+          <motion.div
+            variants={imgAnimate_1}
+            className="w-[1000px] mt-5 mr-5 border-x border-white"
+          >
+            <img src="./kitucxa.jpg" />
+          </motion.div>
         </motion.div>
+
         <motion.div
           variants={imgAnimate_1}
           className="w-[900px] flex gap-2"

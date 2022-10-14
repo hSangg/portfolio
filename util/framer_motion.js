@@ -26,10 +26,28 @@ export const imgAnimate = {
 };
 
 export const imgAnimate_1 = {
-  offscreen: { rotate: 40, opacity: 0 },
+  offscreen: { opacity: 0 },
   onscreen: {
-    rotate: 0,
     opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
+
+export const textAnimate_2 = {
+  offscreen: { scale: 1.1, opacity: 0 },
+  onscreen: {
+    scale: 1,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
+
+export const whileHoverItem = {
+  onHover: {
+    scale: 1.5,
+    marginTop: "10px",
+    backgroundColor: "#22c55e",
+    zIndex: 1,
     transition: { type: "spring", bounce: 0.4, duration: 1 },
   },
 };
