@@ -11,11 +11,14 @@ const ILiveInDormitory = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 1 }}
+      // viewport={{ once: false, amount: 1 }}
       transition={{ staggerChildren: 0.5 }}
+      className="mb-[200px]"
     >
       <motion.div variants={textAnimate_1}>
-        <div className="text-5xl font-bold ">Mình ở kí túc xá .</div>
+        <div className="text-5xl font-bold ">
+          Mình ở kí túc xá . (2021 - present)
+        </div>
       </motion.div>
 
       <motion.div className="flex">
@@ -29,7 +32,7 @@ const ILiveInDormitory = () => {
           </motion.p>
           <motion.div
             variants={imgAnimate_1}
-            className="w-[1000px] mt-5 mr-5 border-x border-white"
+            className="w-[1000px] mt-5 mr-5 border-x border-white "
           >
             <img src="./kitucxa.jpg" />
           </motion.div>

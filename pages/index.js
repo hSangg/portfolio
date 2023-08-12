@@ -2,14 +2,16 @@ import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import AboutMe from "../components/AboutMe";
 import HomePage from "../components/HomePage";
-import { use } from "framer-motion";
+import { useTransform } from "framer-motion";
 import { useFollowPointer } from "../useHooks/useFollowPointer";
 import ILiveInDormitory from "../components/ILiveInDormitory";
+import Fav from "../components/Fav";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
+
   return (
     <>
       <div className="bg-black overflow-hidden">
@@ -35,6 +37,7 @@ export default function Home() {
             <HomePage />
             <AboutMe />
             <ILiveInDormitory />
+            <Fav />
           </div>
         </div>
       </div>

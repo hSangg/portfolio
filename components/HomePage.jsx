@@ -1,7 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import { SiFacebook, SiInstagram } from "react-icons/si";
+import {
+  SiBehance,
+  SiFacebook,
+  SiFlickr,
+  SiInstagram,
+  SiLinkedin,
+  SiPhonepe,
+} from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
+import { MdEmail, MdPhone } from "react-icons/md";
 import { motion } from "framer-motion";
 import { whileHoverItem } from "../util/framer_motion";
 
@@ -11,7 +19,7 @@ const HomePage = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ type: "spring", bounce: 0.4, duration: 1 }}
-      className="flex justify-evenly h-screen items-center"
+      className="flex justify-evenly h-screen items-center relative"
     >
       <motion.div
         whileHover={{
@@ -63,6 +71,16 @@ const HomePage = () => {
             variants={whileHoverItem}
             className="flex items-center gap-2"
           >
+            <SiLinkedin size="25px" />
+            <Link href="https://www.linkedin.com/m/in/cao-sang-b91b19226">
+              <a target="_blank">Cao Sang</a>
+            </Link>
+          </motion.li>
+
+          <motion.li
+            variants={whileHoverItem}
+            className="flex items-center gap-2"
+          >
             <SiFacebook size="25px" />
             <Link href="https://github.com/hSangg">
               <a target="_blank">Sang_Hoai</a>
@@ -73,13 +91,41 @@ const HomePage = () => {
             variants={whileHoverItem}
             className="flex items-center gap-2"
           >
-            <SiInstagram size="25px" />
-            <Link href="https://www.instagram.com/h_sanggg/">
-              <a target="_blank">h_sanggg</a>
+            <SiBehance size="25px" />
+            <Link href="https://www.behance.net/hoaisang">
+              <a target="_blank">Cao Sang</a>
+            </Link>
+          </motion.li>
+
+          <motion.li
+            variants={whileHoverItem}
+            className="flex items-center gap-2"
+          >
+            <SiFlickr size="25px" />
+            <Link href="https://www.flickr.com/photos/sangcanhcut/">
+              <a target="_blank">Sang Cao</a>
             </Link>
           </motion.li>
         </motion.ul>
       </div>
+
+      <motion.ul
+        initial={{ opacity: 0, y: 60 }}
+        viewport={{ once: false, amount: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="absolute top-3 left-0
+       bg-gradient-to-b from-indigo-500 p-4 rounded-lg"
+      >
+        <motion.li className="flex mb-2 align-middle gap-2">
+          <MdPhone size={20} color="white" />
+          <div className="font-semibold">+84944552050</div>
+        </motion.li>
+
+        <motion.li className="flex mb-2 align-middle gap-2">
+          <MdEmail size={20} color="white" />
+          <div className="font-semibold">hoai.sang050@gmail</div>
+        </motion.li>
+      </motion.ul>
     </motion.div>
   );
 };

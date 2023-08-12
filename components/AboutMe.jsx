@@ -7,7 +7,6 @@ const AboutMe = () => {
     <motion.div
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: false, amount: 1 }}
       transition={{ staggerChildren: 0.5 }}
       className=" text-white relative mb-[200px]"
     >
