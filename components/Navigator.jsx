@@ -5,6 +5,7 @@ const Navigator = () => {
   const { scrollYProgress } = useScroll();
   const x_aboutme = useTransform(scrollYProgress, [0, 1], [0, -600]);
   const x_design = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const x_image = useTransform(scrollYProgress, [0, 100], [0, 100]);
   const router = useRouter();
 
   const variants = {
@@ -14,7 +15,7 @@ const Navigator = () => {
   };
 
   return (
-    <motion.div className="relative h-screen">
+    <motion.div className="relative h-screen min-w-[900px]">
       <motion.div
         initial="normal"
         whileHover="hover"
@@ -25,10 +26,10 @@ const Navigator = () => {
         }}
         style={{ x: x_aboutme }}
         className="
-        absolute top-0 right-0
+        absolute top-[20px] right-0
         inline-flex cursor-pointer
-      p-5 rounded-2xl items-center gap-5
-      text-5xl bg-gradient-to-r from-orange-900"
+      px-5 py-2 rounded-2xl items-center gap-5
+      text-5xl bg-gradient-to-r from-gray-900 z-10"
       >
         <motion.figure>
           <Image
@@ -38,7 +39,7 @@ const Navigator = () => {
             alt="location-iso-color"
           />
         </motion.figure>
-        <motion.p className="text-2xl">Cuộc sống cụa mình ?</motion.p>
+        <motion.p className="text-xl">Cuộc sống cụa mình ?</motion.p>
       </motion.div>
 
       <motion.div
@@ -51,10 +52,10 @@ const Navigator = () => {
         }}
         style={{ x: x_design }}
         className="
-        absolute top-[120px] left-0
+        absolute top-[90px] left-0
         inline-flex cursor-pointer flex-row-reverse	
-      p-5 rounded-2xl items-center gap-5
-      text-5xl bg-gradient-to-l from-blue-900"
+        px-5 py-2 rounded-2xl items-center gap-5
+      text-5xl bg-gradient-to-l from-black z-10"
       >
         <motion.figure>
           <Image
@@ -64,8 +65,42 @@ const Navigator = () => {
             alt="picture-iso-color"
           />
         </motion.figure>
-        <motion.p className="text-2xl">Thiết kế cụa mình ?</motion.p>
+        <motion.p className="text-xl">Thiết kế cụa mình ?</motion.p>
       </motion.div>
+
+      <motion.div
+        initial={{
+          filter: "grayscale(1)",
+        }}
+        whileInView={{
+          filter: "grayscale(0.5)",
+          transition: { type: "spring", bounce: 0.4, duration: 5 },
+        }}
+        transition={{ staggerChildren: 2 }}
+        className="absolute h-[600px] left-0 right-0  z-0"
+      >
+        <motion.img
+          src="/bg_crack.png"
+          className="rounded-3xl"
+          alt="bg"
+        />
+      </motion.div>
+
+      {/* <motion.figure
+        style={{
+          scale: x_image,
+          transformOrigin: 500,
+          opacity: x_image,
+        }}
+        className="absolute right-0 top-[250px] z-0"
+      >
+        <Image
+          src="/03_Cover_Plastic.png"
+          width={500}
+          height={500}
+          alt="03_Cover_Plastic"
+        />
+      </motion.figure> */}
     </motion.div>
   );
 };

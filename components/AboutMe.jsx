@@ -8,20 +8,20 @@ const AboutMe = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.5 }}
-      className=" text-white relative mb-[200px]"
+      className=" text-white relative mb-[200px] flex flex-col items-center lg:items-start"
     >
       <motion.h1
         variants={textAnimate}
-        className="text-white text-5xl text-left mb-5 font-bold"
+        className="text-white text-5xl  mb-5 font-bold"
       >
         Một vài nét về mình ._.
       </motion.h1>
 
       <motion.h1
         variants={textAnimate}
-        className="text-white text-3xl mb-5 "
+        className="text-white text-3xl mb-5 text-justify "
       >
-        Mình sinh ra và lớn lên ở xứ công tử{" "}
+        Mình sinh ra và lớn lên ở xứ công tử
         <span className="text-blue-500">Bạc Liêu</span> ✨, một nơi mà
         mình nhớ lại với những kỷ niệm về sông nước, lúc nhỏ cha mẹ
         mình làm nghề thu mua lúa gạo, cũng nhờ đó mà mình mang trong
@@ -35,9 +35,9 @@ const AboutMe = () => {
 
       <motion.figure
         variants={imgAnimate}
-        className="w-[500px] absolute top-[-250px] right-[-50px]"
+        className="w-[500px] hidden lg:block absolute top-[-250px] right-[50px]"
       >
-        <img src="./mekong.jpg" />
+        <img src="./mekong.jpg" className="rounded-lg" />
       </motion.figure>
     </motion.div>
   );

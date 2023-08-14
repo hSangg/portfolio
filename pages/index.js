@@ -1,10 +1,8 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import AboutMe from "../components/AboutMe";
 import HomePage from "../components/HomePage";
-import ILiveInDormitory from "../components/ILiveInDormitory";
-import { useFollowPointer } from "../useHooks/useFollowPointer";
 import Navigator from "../components/Navigator";
+import { useFollowPointer } from "../useHooks/useFollowPointer";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -35,9 +33,6 @@ export default function Home() {
           <div className="lg:w-[1500px]">
             <HomePage />
             <Navigator />
-
-            {/* <AboutMe />
-            <ILiveInDormitory /> */}
           </div>
         </div>
       </div>

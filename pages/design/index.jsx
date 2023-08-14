@@ -8,14 +8,16 @@ const Index = () => {
   return (
     <motion.div className="flex items-center justify-center">
       <motion.div
+        whileHover={{ scale: 1.2 }}
         onClick={() => {
           router.back();
         }}
-        className="fixed top-10 left-10 inline-flex items-center justify-center bg-green-500 rounded-full"
+        className="fixed top-10 cursor-pointer left-0 inline-flex items-center 
+        justify-center bg-green-500 rounded-tr-full rounded-br-full"
       >
         <BiChevronLeft color="white" size={40} />
       </motion.div>
-      <motion.div className="lg:w-[1500px]">
+      <motion.div className="mx-[75px]">
         <SGXua />
       </motion.div>
     </motion.div>
