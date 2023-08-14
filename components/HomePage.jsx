@@ -54,60 +54,72 @@ const HomePage = () => {
         </motion.div>
 
         <div>
-          <h1 className="font-bold text-2xl mb-2">Following me</h1>
+          <h1 className="font-bold text-3xl mb-10 sm:mb-5 text-center sm:text-left ">
+            Following me
+          </h1>
           <motion.ul
             whileHover={"onHover"}
             transition={{ staggerChildren: 0.2 }}
             viewport={{ once: false, amount: 1 }}
-            className="flex flex-col text-[20px] gap-3 opacity-80"
+            className="flex flex-row sm:flex-col scale-150 sm:scale-100 text-[20px] gap-10 sm:gap-3 opacity-80"
           >
             <motion.li
               variants={whileHoverItem}
-              className="flex items-center gap-2"
+              className="flex p-2 sm:p-0 items-center gap-2"
             >
               <VscGithubInverted size="25px" />
               <Link href="https://github.com/hSangg">
-                <a target="_blank">hSangg</a>
+                <a target="_blank" className="hidden sm:block">
+                  hSangg
+                </a>
               </Link>
             </motion.li>
 
             <motion.li
               variants={whileHoverItem}
-              className="flex items-center gap-2"
+              className="flex p-2 sm:p-0 items-center gap-2"
             >
               <SiLinkedin size="25px" />
               <Link href="https://www.linkedin.com/m/in/cao-sang-b91b19226">
-                <a target="_blank">Cao Sang</a>
+                <a target="_blank" className="hidden sm:block">
+                  Cao Sang
+                </a>
               </Link>
             </motion.li>
 
             <motion.li
               variants={whileHoverItem}
-              className="flex items-center gap-2"
+              className="flex p-2 sm:p-0 items-center gap-2"
             >
               <SiFacebook size="25px" />
               <Link href="https://github.com/hSangg">
-                <a target="_blank">Sang_Hoai</a>
+                <a target="_blank" className="hidden sm:block">
+                  Sang_Hoai
+                </a>
               </Link>
             </motion.li>
 
             <motion.li
               variants={whileHoverItem}
-              className="flex items-center gap-2"
+              className="flex p-2 sm:p-0 items-center gap-2"
             >
               <SiBehance size="25px" />
               <Link href="https://www.behance.net/hoaisang">
-                <a target="_blank">Cao Sang</a>
+                <a target="_blank" className="hidden sm:block">
+                  Cao Sang
+                </a>
               </Link>
             </motion.li>
 
             <motion.li
               variants={whileHoverItem}
-              className="flex items-center gap-2"
+              className="flex p-2 sm:p-0 items-center gap-2"
             >
               <SiFlickr size="25px" />
               <Link href="https://www.flickr.com/photos/sangcanhcut/">
-                <a target="_blank">Sang Cao</a>
+                <a target="_blank" className="hidden sm:block">
+                  Sang Cao
+                </a>
               </Link>
             </motion.li>
           </motion.ul>

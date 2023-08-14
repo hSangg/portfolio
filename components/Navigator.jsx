@@ -68,18 +68,8 @@ const Navigator = () => {
         <motion.p className="text-xl">Thiết kế cụa mình ?</motion.p>
       </motion.div>
 
-      <motion.div
-        initial={{
-          filter: "grayscale(1)",
-        }}
-        whileInView={{
-          filter: "grayscale(0.5)",
-          transition: { type: "spring", bounce: 0.4, duration: 5 },
-        }}
-        transition={{ staggerChildren: 2 }}
-        className="absolute h-[600px] left-0 right-0  z-0"
-      >
-        <motion.img src="/bg_crack.png" className="" alt="bg" />
+      <motion.div className="absolute h-[600px] left-0 right-0 z-0">
+        <Image src="/bg_crack.png" layout="fill" objectFit="cover" />
       </motion.div>
 
       {/* <motion.figure
