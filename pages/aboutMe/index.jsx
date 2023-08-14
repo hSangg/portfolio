@@ -18,7 +18,7 @@ const Index = () => {
       >
         <BiChevronLeft color="white" size={40} />
       </motion.div>
-      <motion.div className="pt-[500px] mx-10 lg:mx-[50px]">
+      <motion.div className="pt-[500px] mx-[100px] lg:mx-[50px]">
         <AboutMe />
         <ILiveInDormitory />
       </motion.div>

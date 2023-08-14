@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import React from "react";
-import { motion, Variants } from "framer-motion";
 import { imgAnimate, textAnimate } from "../util/framer_motion";
 
 const AboutMe = () => {
@@ -12,7 +12,7 @@ const AboutMe = () => {
     >
       <motion.h1
         variants={textAnimate}
-        className="text-white text-5xl  mb-5 font-bold"
+        className="text-white text-5xl  mt-10 mb-5 font-bold"
       >
         Một vài nét về mình ._.
       </motion.h1>

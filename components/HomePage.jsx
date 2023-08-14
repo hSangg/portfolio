@@ -30,7 +30,7 @@ const HomePage = () => {
           }}
           className="sm:w-[800px] relative"
         >
-          <motion.div className="text-3xl sm:text-2xl">
+          <motion.div className="text-3xl  mt-[50px] sm:text-2xl">
             <div className="w-[600px] sm:w-full">
               Hy!{" "}
               <span className="border-b-2 border-indigo-500 italic font-[700]">

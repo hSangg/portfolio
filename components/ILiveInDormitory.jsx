@@ -31,11 +31,11 @@ const ILiveInDormitory = () => {
         variants={imgAnimate_1}
         className="flex justify-center items-center flex-col mt-5 lg:flex-row"
       >
-        <motion.div className="w-[900px] lg:h-[500px]">
+        <motion.div className="w-[700px] lg:h-[500px]">
           <motion.img src="./kitucxa.jpg" className="rounded-lg" />
         </motion.div>
 
-        <motion.div className="w-[900px] lg:h-[500px]">
+        <motion.div className="w-[700px] lg:h-[500px]">
           <motion.img src="./family.jpg" className="rounded-lg" />
         </motion.div>
       </motion.div>
