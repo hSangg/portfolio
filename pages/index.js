@@ -2,10 +2,9 @@ import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import AboutMe from "../components/AboutMe";
 import HomePage from "../components/HomePage";
-import { useTransform } from "framer-motion";
-import { useFollowPointer } from "../useHooks/useFollowPointer";
 import ILiveInDormitory from "../components/ILiveInDormitory";
-import Fav from "../components/Fav";
+import { useFollowPointer } from "../useHooks/useFollowPointer";
+import Navigator from "../components/Navigator";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -35,9 +34,10 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <div className="lg:w-[1500px]">
             <HomePage />
-            <AboutMe />
-            <ILiveInDormitory />
-            <Fav />
+            <Navigator />
+
+            {/* <AboutMe />
+            <ILiveInDormitory /> */}
           </div>
         </div>
       </div>

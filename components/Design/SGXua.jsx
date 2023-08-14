@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import { textAnimate_2 } from "../util/framer_motion";
+import { textAnimate_2 } from "../../util/framer_motion";
 
-const Fav = () => {
+const SGXua = () => {
   const list_banner = ["hnvd", "cbsg", "txcm", "tn"];
 
   return (
@@ -9,17 +10,17 @@ const Fav = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.5 }}
-      className=""
+      className="mt-20"
     >
-      <motion.div
+      <hr className="mb-[30px] mr-[500px] opacity-50"></hr>
+      <motion.p
         variants={textAnimate_2}
-        className="text-5xl mt-2 mb-1 font-bold"
+        className="text-5xl mb-16 iCielBC1676ModernMap"
       >
-        Mình thích thiết kế.
-      </motion.div>
-      <motion.p variants={textAnimate_2} className="text-2xl mb-5">
-        Mình đang thực hiện 1 dự án thiết kế lại biển hiệu và các
-        poster, banner theo phong cách sài gòn xưa
+        Mình dùng những chất liệu mộc mạc, những thanh âm dư vị của
+        <b> "Sài Gòn Tân Thời"</b> cũng với chất riêng của bản thân để
+        tạo nên những poster, những biển hiệu mang đậm dư vị của Sài
+        Gòn những năm bao cấp.
       </motion.p>
 
       <motion.div className="flex gap-3">
@@ -53,4 +54,4 @@ const Fav = () => {
   );
 };
 
-export default Fav;
+export default SGXua;
