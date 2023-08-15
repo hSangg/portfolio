@@ -57,19 +57,24 @@ const Navigator = () => {
         px-5 py-2 rounded-2xl items-center gap-5
       text-5xl bg-gradient-to-l from-black z-10"
       >
-        <motion.figure>
-          <Image
-            src="/picture-iso-color.png"
-            width={40}
-            height={40}
-            alt="picture-iso-color"
-          />
-        </motion.figure>
+        <Image
+          src="/picture-iso-color.png"
+          width={40}
+          height={40}
+          alt="picture-iso-color"
+        />
+
         <motion.p className="text-xl">Thiết kế cụa mình ?</motion.p>
       </motion.div>
 
       <motion.div className="absolute h-[600px] left-0 right-0 z-0">
-        <Image src="/bg_crack.png" layout="fill" objectFit="cover" />
+        <Image
+          src="/bg_crack.png"
+          style={{ borderRadius: "10px" }}
+          loading="lazy"
+          layout="fill"
+          objectFit="cover"
+        />
       </motion.div>
 
       {/* <motion.figure

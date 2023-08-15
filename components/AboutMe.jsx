@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { imgAnimate, textAnimate } from "../util/framer_motion";
+import Image from "next/image";
 
 const AboutMe = () => {
   return (
@@ -12,7 +13,7 @@ const AboutMe = () => {
     >
       <motion.h1
         variants={textAnimate}
-        className="text-white text-5xl  mt-10 mb-5 font-bold"
+        className="text-white text-5xl  mb-5 font-bold"
       >
         Một vài nét về mình ._.
       </motion.h1>
@@ -35,9 +36,15 @@ const AboutMe = () => {
 
       <motion.figure
         variants={imgAnimate}
-        className="w-[500px] hidden lg:block absolute top-[-250px] right-[50px]"
+        className="w-[500px] h-[250px] hidden lg:block absolute top-[-250px] right-[50px]"
       >
-        <img src="./mekong.jpg" className="rounded-lg" />
+        <Image
+          style={{ borderRadius: "20px" }}
+          src="/mekong.jpg"
+          loading="lazy"
+          objectFit="cover"
+          layout="fill"
+        />
       </motion.figure>
     </motion.div>
   );

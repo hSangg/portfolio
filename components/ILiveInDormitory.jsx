@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import React from "react";
 import {
+  imgAnimate,
   imgAnimate_1,
   textAnimate_1,
   textAnimate_2,
 } from "../util/framer_motion";
+import Image from "next/image";
+import ImageCustom from "./ImageCustom";
 
 const ILiveInDormitory = () => {
   return (
@@ -28,15 +31,112 @@ const ILiveInDormitory = () => {
       </motion.div>
 
       <motion.div
-        variants={imgAnimate_1}
-        className="flex justify-center items-center flex-col mt-5 sm:flex-row"
+        initial={{ opacity: 0, y: "100px" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="flex justify-center
+      mb-[100px]
+      items-center gap-5 flex-col mt-5 sm:flex-row"
       >
-        <motion.div className="w-[700px] sm:h-[500px]">
-          <motion.img src="./kitucxa.jpg" className="rounded-lg" />
+        <motion.div className="w-full h-[500px] relative">
+          <Image
+            style={{ borderRadius: "20px" }}
+            loading="lazy"
+            objectFit="cover"
+            src="/kitucxa.jpg"
+            layout="fill"
+          />
         </motion.div>
 
-        <motion.div className="w-[700px] sm:h-[500px]">
-          <motion.img src="./family.jpg" className="rounded-lg" />
+        <motion.div className="w-full h-[500px] relative">
+          <Image
+            style={{ borderRadius: "20px" }}
+            loading="lazy"
+            objectFit="cover"
+            src="/family.jpg"
+            layout="fill"
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div>
+        <motion.h1 className="text-5xl font-bold ">
+          Tớ có những người bạn
+        </motion.h1>
+
+        <motion.div
+          className="flex flex-col sm:flex-row sm:items-start
+        gap-10 items-center justify-center"
+        >
+          <motion.div className="text-4xl text-justify my-4 iCielBCOldStyle-Regular">
+            Thật sự thì mình mới để ý đến sự hiện diện của những bạn
+            nhỏ này ở nơi mình hay lui đến trong khoảng đầu năm nay
+            thôi (2023), theo mình được biết thì những bạn này 1 phần
+            là mèo hoang, 1 phần là do những bạn ở đây chuyển ra ngoài
+            rồi không mang theo :( Buồn ha. <br></br> <br></br>
+            Nhưng cứ như một sự bù đắp, các bạn ở đây cũng rất được
+            mọi người thương iu, người thì cho ăn, người thì chơi,
+            thậm chí còn trò chuyện cùng cơ. Mong rằng sau thế hệ của
+            mình, những bạn này vẫn sẽ luôn được yêu thương như thế
+            <span className="inline-block translate-x-2 translate-y-2">
+              <img
+                className="w-[40px] h-[40px]"
+                src="./tulipicon.png"
+              />
+            </span>
+          </motion.div>
+          <motion.div className="">
+            <ImageCustom
+              srcName="themeo.png"
+              w={"1600px"}
+              h={"1200px"}
+            />
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          transition={{ staggerChildren: 1 }}
+          className="h-[1200px] w-full relative"
+        >
+          <motion.div
+            variants={imgAnimate}
+            className="absolute top-0 left-10"
+          >
+            <Image
+              style={{ borderRadius: "20px" }}
+              src="/meo_1.png"
+              width={"500px"}
+              height={"500px"}
+              objectFit="cover"
+            />
+          </motion.div>
+
+          <motion.div
+            variants={imgAnimate}
+            className="absolute bottom-5 left-[500px]"
+          >
+            <Image
+              style={{ borderRadius: "20px" }}
+              src="/meo_2.png"
+              width={"500px"}
+              height={"500px"}
+              objectFit="cover"
+            />
+          </motion.div>
+
+          <motion.div
+            variants={imgAnimate}
+            className="absolute top-10 right-10"
+          >
+            <Image
+              style={{ borderRadius: "20px" }}
+              src="/meo_3.png"
+              width={"500px"}
+              height={"500px"}
+              objectFit="cover"
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>

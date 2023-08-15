@@ -23,6 +23,11 @@ export const imgAnimate = {
     opacity: 1,
     transition: { type: "spring", bounce: 0.4, duration: 1 },
   },
+  hover: {
+    scale: 1.1,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
 };
 
 export const imgAnimate_1 = {
