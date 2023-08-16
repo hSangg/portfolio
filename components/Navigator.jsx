@@ -71,7 +71,7 @@ const Navigator = () => {
 
       <motion.div className="absolute h-[600px] left-0 right-0 z-0">
         <Image
-          src="/bg_crack.png"
+          src="/bg_crack.jpg"
           style={{ borderRadius: "10px" }}
           loading="lazy"
           layout="fill"

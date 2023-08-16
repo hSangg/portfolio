@@ -4,7 +4,6 @@ const SangText = () => {
   return (
     <motion.div
       initial={{ y: "-50px", opacity: 0 }}
-      whileHover={{ scale: 1.2 }}
       whileInView={{
         y: 0,
         opacity: 1,
@@ -17,6 +16,7 @@ const SangText = () => {
         width="1300px"
         height="500px"
         objectFit="contain"
+        loading="lazy"
       />
     </motion.div>
   );

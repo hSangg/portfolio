@@ -40,8 +40,8 @@ const ILiveInDormitory = () => {
         <motion.div className="w-full h-[700px] relative">
           <Image
             style={{ borderRadius: "20px" }}
-            loading="lazy"
             objectFit="cover"
+            loading="lazy"
             src="/kitucxa.jpg"
             layout="fill"
           />
@@ -50,8 +50,8 @@ const ILiveInDormitory = () => {
         <motion.div className="w-full h-[700px] relative">
           <Image
             style={{ borderRadius: "20px" }}
-            loading="lazy"
             objectFit="cover"
+            loading="lazy"
             src="/family.jpg"
             layout="fill"
           />
@@ -106,6 +106,7 @@ const ILiveInDormitory = () => {
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              loading="lazy"
             />
           </motion.div>
 
@@ -116,6 +117,7 @@ const ILiveInDormitory = () => {
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              loading="lazy"
             />
           </motion.div>
 
@@ -126,16 +128,26 @@ const ILiveInDormitory = () => {
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              loading="lazy"
             />
           </motion.div>
 
-          <motion.div variants={imgAnimate}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            variants={imgAnimate}
+          >
             <Image
               style={{ borderRadius: "20px" }}
               src="/meo_4.png"
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              loading="lazy"
+              className="transition-opacity opacity-0 duration-[2s]"
+              onLoadingComplete={(img) =>
+                img.classList.remove("opacity-0")
+              }
             />
           </motion.div>
         </motion.div>
