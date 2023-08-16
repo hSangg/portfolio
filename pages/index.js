@@ -3,6 +3,8 @@ import { useRef } from "react";
 import HomePage from "../components/HomePage";
 import Navigator from "../components/Navigator";
 import { useFollowPointer } from "../useHooks/useFollowPointer";
+import Image from "next/image";
+import SangText from "../components/SangText";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -32,6 +34,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <div className="lg:w-[1500px]">
             <HomePage />
+            <SangText />
             <Navigator />
           </div>
         </div>

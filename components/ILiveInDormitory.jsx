@@ -18,11 +18,11 @@ const ILiveInDormitory = () => {
       className="mb-[200px]"
     >
       <motion.div variants={textAnimate_1}>
-        <motion.div className="text-5xl font-bold ">
+        <motion.div className="text-5xl font-bold text-center lg:text-left">
           Mình ở kí túc xá . (2021 - present)
         </motion.div>
 
-        <motion.p className="text-3xl mt-5" variants={textAnimate_2}>
+        <motion.p className="text-4xl mt-5" variants={textAnimate_2}>
           {" "}
           Mình chọn ở kí túc xá một phần là vì nó rẻ, phần còn lại là
           mình rất ham dui. Được nghe review là nếu thời sinh viên mà
@@ -37,7 +37,7 @@ const ILiveInDormitory = () => {
       mb-[100px]
       items-center gap-5 flex-col mt-5 sm:flex-row"
       >
-        <motion.div className="w-full h-[500px] relative">
+        <motion.div className="w-full h-[700px] relative">
           <Image
             style={{ borderRadius: "20px" }}
             loading="lazy"
@@ -47,7 +47,7 @@ const ILiveInDormitory = () => {
           />
         </motion.div>
 
-        <motion.div className="w-full h-[500px] relative">
+        <motion.div className="w-full h-[700px] relative">
           <Image
             style={{ borderRadius: "20px" }}
             loading="lazy"
@@ -97,43 +97,44 @@ const ILiveInDormitory = () => {
           initial={"offscreen"}
           whileInView={"onscreen"}
           transition={{ staggerChildren: 1 }}
-          className="h-[1200px] w-full relative"
+          className="mt-10  w-full flex flex-wrap justify-center items-center gap-4 "
         >
-          <motion.div
-            variants={imgAnimate}
-            className="absolute top-0 left-10"
-          >
+          <motion.div className="" variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
               src="/meo_1.png"
-              width={"500px"}
-              height={"500px"}
+              width={"700px"}
+              height={"700px"}
               objectFit="cover"
             />
           </motion.div>
 
-          <motion.div
-            variants={imgAnimate}
-            className="absolute bottom-5 left-[500px]"
-          >
+          <motion.div variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
               src="/meo_2.png"
-              width={"500px"}
-              height={"500px"}
+              width={"700px"}
+              height={"700px"}
               objectFit="cover"
             />
           </motion.div>
 
-          <motion.div
-            variants={imgAnimate}
-            className="absolute top-10 right-10"
-          >
+          <motion.div variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
               src="/meo_3.png"
-              width={"500px"}
-              height={"500px"}
+              width={"700px"}
+              height={"700px"}
+              objectFit="cover"
+            />
+          </motion.div>
+
+          <motion.div variants={imgAnimate}>
+            <Image
+              style={{ borderRadius: "20px" }}
+              src="/meo_4.png"
+              width={"700px"}
+              height={"700px"}
               objectFit="cover"
             />
           </motion.div>

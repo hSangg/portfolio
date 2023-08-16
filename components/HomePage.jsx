@@ -10,6 +10,7 @@ import {
 } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
 import { whileHoverItem } from "../util/framer_motion";
+import Image from "next/image";
 
 const HomePage = () => {
   return (

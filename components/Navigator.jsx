@@ -48,7 +48,7 @@ const Navigator = () => {
         whileInView="view"
         variants={variants}
         onClick={() => {
-          router.push("/design");
+          router.push("/artistic");
         }}
         style={{ x: x_design }}
         className="
@@ -64,7 +64,9 @@ const Navigator = () => {
           alt="picture-iso-color"
         />
 
-        <motion.p className="text-xl">Thiết kế cụa mình ?</motion.p>
+        <motion.p className="text-xl">
+          Mình thích nghệ thuật ?
+        </motion.p>
       </motion.div>
 
       <motion.div className="absolute h-[600px] left-0 right-0 z-0">
