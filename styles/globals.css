@@ -19,6 +19,11 @@
   src: url("../public/fonts/iCielBCOldStyle-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Joyride-Extended";
+  src: url("../public/fonts/Joyride-Extended.otf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,6 +72,18 @@ img {
   object-fit: cover;
 }
 
+.text-header {
+  @apply text-3xl font-[700] uppercase mt-4;
+}
+
+.text-paragraph {
+  @apply text-2xl mt-1 text-justify;
+}
+
+.text-button-linking {
+  @apply flex items-center justify-center bg-white cursor-pointer p-3  text-3xl;
+}
+
 .iCielBC1676ModernMap {
   font-family: "iCielBC1676ModernMap";
 }
@@ -78,6 +95,11 @@ img {
 .iCielBCOldStyle-Regular {
   font-family: "iCielBCOldStyle-Regular";
 }
+
+.Joyride-Extended {
+  font-family: "Joyride-Extended";
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

@@ -12,7 +12,7 @@ const SangText = () => {
       className="flex items-center justify-center mb-[600px]"
     >
       <Image
-        src="/sang.png"
+        src="/sang.jpg"
         width="1300px"
         height="500px"
         objectFit="contain"

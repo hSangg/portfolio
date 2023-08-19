@@ -44,6 +44,7 @@ const ILiveInDormitory = () => {
             loading="lazy"
             src="/kitucxa.jpg"
             layout="fill"
+            alt="kituxa"
           />
         </motion.div>
 
@@ -53,6 +54,7 @@ const ILiveInDormitory = () => {
             objectFit="cover"
             loading="lazy"
             src="/family.jpg"
+            alt="ktx"
             layout="fill"
           />
         </motion.div>
@@ -78,9 +80,11 @@ const ILiveInDormitory = () => {
             thậm chí còn trò chuyện cùng cơ. Mong rằng sau thế hệ của
             mình, những bạn này vẫn sẽ luôn được yêu thương như thế
             <span className="inline-block translate-x-2 translate-y-2">
-              <img
-                className="w-[40px] h-[40px]"
-                src="./tulipicon.png"
+              <Image
+                width={"40px"}
+                height={"40px"}
+                src={"/tulipicon.png"}
+                alt="tulip"
               />
             </span>
           </motion.div>
@@ -102,10 +106,23 @@ const ILiveInDormitory = () => {
           <motion.div className="" variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
-              src="/meo_1.png"
+              src="/meo_1.jpg"
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              loading="lazy"
+              alt="meo"
+            />
+          </motion.div>
+
+          <motion.div variants={imgAnimate}>
+            <Image
+              style={{ borderRadius: "20px" }}
+              src="/meo_2.jpg"
+              width={"700px"}
+              height={"700px"}
+              objectFit="cover"
+              alt="meo"
               loading="lazy"
             />
           </motion.div>
@@ -113,10 +130,11 @@ const ILiveInDormitory = () => {
           <motion.div variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
-              src="/meo_2.png"
+              src="/meo_3.jpg"
               width={"700px"}
               height={"700px"}
               objectFit="cover"
+              alt="meo"
               loading="lazy"
             />
           </motion.div>
@@ -124,30 +142,12 @@ const ILiveInDormitory = () => {
           <motion.div variants={imgAnimate}>
             <Image
               style={{ borderRadius: "20px" }}
-              src="/meo_3.png"
+              src="/meo_4.jpg"
               width={"700px"}
               height={"700px"}
               objectFit="cover"
               loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            variants={imgAnimate}
-          >
-            <Image
-              style={{ borderRadius: "20px" }}
-              src="/meo_4.png"
-              width={"700px"}
-              height={"700px"}
-              objectFit="cover"
-              loading="lazy"
-              className="transition-opacity opacity-0 duration-[2s]"
-              onLoadingComplete={(img) =>
-                img.classList.remove("opacity-0")
-              }
+              alt="meo"
             />
           </motion.div>
         </motion.div>
