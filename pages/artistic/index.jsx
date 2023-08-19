@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import Back from "../../components/Back";
 import Image from "next/image";
-import { FiEye } from "react-icons/fi";
-import ImageCustom from "../../components/ImageCustom";
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { BiPause, BiPlay } from "react-icons/bi";
-import { useRouter } from "next/router";
+import Back from "../../components/Back";
+import ImageCustom from "../../components/ImageCustom";
 
 const Index = () => {
   const [playing, setPlaying] = useState(false);
@@ -159,7 +158,7 @@ const Index = () => {
 
           <motion.div
             onClick={() => {
-              router.push("/artistic/design");
+              router.push("/design");
             }}
             className="text-button-linking"
           >
