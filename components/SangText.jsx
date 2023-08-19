@@ -17,6 +17,7 @@ const SangText = () => {
         height="500px"
         objectFit="contain"
         loading="lazy"
+        alt=""
       />
     </motion.div>
   );

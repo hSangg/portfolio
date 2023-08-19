@@ -6,6 +6,7 @@ const ImageCustom = ({ srcName, w, h, ...rest }) => {
       width={w}
       height={h}
       loading="lazy"
+      alt="srm"
       {...rest}
     />
   );

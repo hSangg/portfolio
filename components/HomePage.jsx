@@ -43,7 +43,11 @@ const HomePage = () => {
               <span className="text-green-500">-</span> về những thứ
               xung quanh mình <span>.-. </span>
               <figure className="inline-block absolute translate-y-[-5px] ">
-                <img className="w-[50px]" src="./medal.png" />
+                <img
+                  alt="fuguge"
+                  className="w-[50px]"
+                  src="./medal.png"
+                />
               </figure>
             </div>
           </motion.div>

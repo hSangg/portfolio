@@ -43,6 +43,7 @@ const AboutMe = () => {
           src="/mekong.jpg"
           loading="lazy"
           objectFit="cover"
+          alt="mekong"
           layout="fill"
         />
       </motion.figure>

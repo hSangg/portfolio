@@ -78,6 +78,7 @@ const Navigator = () => {
           style={{ borderRadius: "10px" }}
           loading="lazy"
           layout="fill"
+          alt="bg-cr"
           objectFit="cover"
         />
       </motion.div>

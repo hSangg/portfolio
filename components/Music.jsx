@@ -30,6 +30,7 @@ const Music = () => {
             src={"/cassette_4.png"}
             layout="fill"
             objectFit="contain"
+            alt="caset"
           />
         </motion.div>
       </motion.div>

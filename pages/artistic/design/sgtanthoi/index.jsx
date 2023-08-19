@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { BiChevronLeft } from "react-icons/bi";
 import { useRouter } from "next/router";
-import SGXua from "../../../components/Design/SGXua";
-import Back from "../../../components/Back";
+import SGXua from "../../../../components/Design/SGXua";
+import Back from "../../../../components/Back";
 
 const Index = () => {
   const router = useRouter();
