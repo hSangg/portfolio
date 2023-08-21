@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import Image from "next/image";
+import { VscStarEmpty } from "react-icons/vsc";
+import Back from "./Back";
 
 const CircularImageSlider = () => {
   useEffect(() => {
@@ -18,13 +21,23 @@ const CircularImageSlider = () => {
 
   return (
     <div className="body-CircularImageSlider h-[100%]">
-      <h1
+      <Back />
+      <div
         className="absolute top-[50%] left-[50%] translate-x-[-50%]
-      translate-y-[-50%] text-left uppercase text-2xl m-0
+      translate-y-[-50%] text-left  text-3xl m-0
       "
       >
-        VIsual@ <br /> Graphic Design
-      </h1>
+        <div className="flex items-center gap-1">
+          <div>VIsual</div>
+          <div>
+            <VscStarEmpty size={30} color="white" />
+          </div>
+        </div>
+
+        <div className="DFVN_afronaut text-yellow-500">
+          graphic design
+        </div>
+      </div>
       <div
         className="absolute top-0 h-[100vh] w-[100vw]
         flex items-center justify-center overflow-hidden"
@@ -41,8 +54,8 @@ const CircularImageSlider = () => {
                   className="cosmos-item absolute top-0 left-0 w-[100%] 
                 h-[100%] fall-and-disapper"
                 >
-                  <img
-                    className="w-full h-full object-cover"
+                  <Image
+                    layout="fill"
                     key={x}
                     alt={x}
                     src={"/gach_lat/" + x.toString() + ".jpg"}

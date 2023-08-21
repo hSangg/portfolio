@@ -24,6 +24,11 @@
   src: url("../public/fonts/Joyride-Extended.otf");
 }
 
+@font-face {
+  font-family: "DFVN_afronaut";
+  src: url("../public/fonts/DFVN_afronaut.otf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -60,6 +65,26 @@ img {
   object-fit: cover;
 }
 
+.zoom {
+  zoom: 1;
+}
+
+@media screen {
+  .zoom {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 640px) {
+  .zoom {
+    zoom: 1;
+  }
+}
+
+.zoom-normal {
+  zoom: 1;
+}
+
 .text-header {
   @apply text-3xl font-[700] uppercase mt-4;
 }
@@ -73,7 +98,7 @@ img {
 }
 
 .button-cv-page {
-  @apply px-2 py-1 rounded-md  font-bold text-white block  min-w-[60px] mt-2 opacity-70;
+  @apply px-2 py-1 rounded-md  font-bold text-white block  min-w-[60px] opacity-70;
 }
 
 .iCielBC1676ModernMap {
@@ -90,6 +115,10 @@ img {
 
 .Joyride-Extended {
   font-family: "Joyride-Extended";
+}
+
+.DFVN_afronaut {
+  font-family: "DFVN_afronaut";
 }
 
 ::-webkit-scrollbar {

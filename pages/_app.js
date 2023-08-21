@@ -1,9 +1,10 @@
 import Head from "next/head";
 import "../styles/globals.css";
 import NormalLayout from "../components/Layout/NormalLayout";
+import BasicLayout from "../components/Layout/BasicLayout";
 
 function MyApp({ Component, pageProps }) {
-  const GetLayout = Component.getLayout || NormalLayout;
+  const GetLayout = Component.getLayout || BasicLayout;
 
   return (
     <div>

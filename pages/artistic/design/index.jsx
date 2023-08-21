@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import CircularImageSlider from "../../../components/CircularImageSlider";
+import NormalLayout from "../../../components/Layout/NormalLayout";
 
 const Index = () => {
   const { scrollYProgress } = useScroll();
@@ -15,4 +16,4 @@ const Index = () => {
 
 export default Index;
 
-// Index.getLayout = BasicLayout;
+Index.getLayout = NormalLayout;
