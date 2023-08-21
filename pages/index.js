@@ -5,6 +5,8 @@ import Navigator from "../components/Navigator";
 import { useFollowPointer } from "../useHooks/useFollowPointer";
 import Image from "next/image";
 import SangText from "../components/SangText";
+import CV from "../components/CV";
+import CircularImageSlider from "../components/CircularImageSlider";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -28,13 +30,14 @@ export default function Home() {
 
         <motion.div
           style={{ scaleX: scrollYProgress }}
-          className="fixed top-0 left-0 right-0 bottom-0 bg-green-500 h-1 origin-left"
+          className="fixed z-20 top-0 left-0 right-0 bottom-0 bg-green-500 h-1 origin-left"
         />
 
         <div className="flex items-center justify-center">
           <div className="lg:w-[1500px]">
             <HomePage />
             <SangText />
+            <CV />
             <Navigator />
           </div>
         </div>

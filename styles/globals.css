@@ -28,7 +28,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
 }
 
 html,
@@ -36,18 +35,7 @@ body {
   font-family: "Montserrat", sans-serif;
   scroll-snap-type: y mandatory;
   background-color: black;
-}
-
-@media (max-width: 1500px) {
-  html {
-    zoom: 0.7;
-  }
-}
-
-@media (max-width: 1000px) {
-  html {
-    zoom: 0.5;
-  }
+  color: white;
 }
 
 .progress {
@@ -81,7 +69,11 @@ img {
 }
 
 .text-button-linking {
-  @apply flex items-center justify-center bg-white cursor-pointer p-3  text-3xl;
+  @apply flex items-center justify-center  bg-white cursor-pointer p-3  text-3xl;
+}
+
+.button-cv-page {
+  @apply px-2 py-1 rounded-md  font-bold text-white block  min-w-[60px] mt-2 opacity-70;
 }
 
 .iCielBC1676ModernMap {
@@ -104,8 +96,32 @@ img {
   display: none;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.fall-and-disapper {
+  animation: fallAndDisapper 5s infinite ease-in-out;
+  transform-origin: bottom;
+  transform: scale(0);
+}
+
+@keyframes fallAndDisapper {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    top: -200px;
+    transform: scale(1);
+  }
+  100% {
+    top: -150px;
+    left: -300px;
+    transform: scale(0);
+  }
 }

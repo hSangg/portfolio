@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { BiPause, BiPlay } from "react-icons/bi";
-import Back from "../../components/Back";
 import ImageCustom from "../../components/ImageCustom";
+import BasicLayout from "../../components/Layout/BasicLayout";
 
 const Index = () => {
   const [playing, setPlaying] = useState(false);
@@ -22,9 +22,7 @@ const Index = () => {
   };
 
   return (
-    <motion.div className="mx-[100px] mt-[100px]">
-      <Back />
-
+    <>
       <motion.div className="p-10 border flex flex-col items-center border-white mb-10 border-opacity-25 ">
         <ImageCustom
           srcName={"line-star-artistic.jpg"}
@@ -158,7 +156,7 @@ const Index = () => {
 
           <motion.div
             onClick={() => {
-              router.push("/design");
+              router.push("/artistic/design");
             }}
             className="text-button-linking"
           >
@@ -175,8 +173,10 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 };
 
 export default Index;
+
+Index.getLayout = BasicLayout;

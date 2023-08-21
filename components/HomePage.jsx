@@ -43,10 +43,11 @@ const HomePage = () => {
               <span className="text-green-500">-</span> về những thứ
               xung quanh mình <span>.-. </span>
               <figure className="inline-block absolute translate-y-[-5px] ">
-                <img
+                <Image
                   alt="fuguge"
-                  className="w-[50px]"
-                  src="./medal.png"
+                  width={"50px"}
+                  height={"50px"}
+                  src="/medal.png"
                 />
               </figure>
             </div>

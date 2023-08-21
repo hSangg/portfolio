@@ -4,11 +4,11 @@ const Music = () => {
   return (
     <motion.div>
       <motion.div className="flex flex-col sm:flex-row items-start gap-6">
-        <motion.div>
+        <motion.div className="">
           <motion.h1 className="font-bold text-5xl">
             Mình thích âm nhạc
           </motion.h1>
-          <motion.p className="text-3xl mt-2 text-justify">
+          <motion.p className="text-3xl min-w-[300px] mt-2 text-justify">
             Mình biết đến âm nhạc từ hồi năm lớp 7, có thể nói cuộc
             sống của mình được tô điểm bởi âm nhạc rất nhiều, xưa mình
             biết đến design cũng từ âm nhạc mà ra. Lúc đầu thì tìm

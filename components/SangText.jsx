@@ -9,7 +9,7 @@ const SangText = () => {
         opacity: 1,
         transition: { type: "spring", bounce: 0.5, duration: 1 },
       }}
-      className="flex items-center justify-center mb-[600px]"
+      className="flex items-center justify-center  mb-[200px]"
     >
       <Image
         src="/sang.jpg"

@@ -10,7 +10,7 @@ const Back = () => {
       onClick={() => {
         router.back();
       }}
-      className="fixed top-10 cursor-pointer left-0 inline-flex items-center 
+      className="fixed z-auto top-10 cursor-pointer left-0 inline-flex items-center 
         justify-center bg-green-500 rounded-tr-full rounded-br-full"
     >
       <BiChevronLeft color="white" size={40} />

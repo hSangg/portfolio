@@ -7,7 +7,6 @@ const Index = () => {
   const router = useRouter();
   return (
     <motion.div className="flex items-center justify-center">
-      <Back />
       <motion.div className="mx-[75px]">
         <SGXua />
       </motion.div>
