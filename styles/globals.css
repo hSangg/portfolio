@@ -154,3 +154,8 @@ img {
     transform: scale(0);
   }
 }
+
+.background-paper {
+  background-image: url("../public/FW_Paper_White_01.jpg");
+  background-size: cover;
+}

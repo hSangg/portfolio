@@ -21,7 +21,7 @@ export const imgAnimate = {
   onscreen: {
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring", bounce: 0.4, duration: 0.5 },
   },
   hover: {
     scale: 1.1,

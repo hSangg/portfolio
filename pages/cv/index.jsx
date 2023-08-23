@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import BasicLayout from "../../components/Layout/BasicLayout";
-import { profileInfor } from "../../util/data";
+import { profileInfor, skillList } from "../../util/data";
 
 const Index = () => {
   return (
     <motion.div className="p-5">
-      <motion.div className="bg-white rounded-md p-[50px] text-black wapper-cv">
+      <motion.div className="background-paper rounded-md p-[50px] text-black wapper-cv">
         <div className="pb-2">
           <h1 className="text-5xl font-[700] uppercase ">
             Cao hoài sang
@@ -26,15 +26,7 @@ const Index = () => {
           ))}
         </ul>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", duration: 1 },
-          }}
-          className="mt-5 text-xl"
-        >
+        <motion.div className="mt-5 text-xl">
           <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
             EDUCATION
           </h1>
@@ -48,15 +40,7 @@ const Index = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", duration: 1 },
-          }}
-          className="mt-5 text-xl"
-        >
+        <motion.div className="mt-5 text-xl">
           <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
             pet projects
           </h1>
@@ -151,21 +135,20 @@ const Index = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", duration: 1 },
-          }}
-          className="mt-5 text-xl"
-        >
+        <motion.div className="mt-5 text-xl">
           <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
             Skills
           </h1>
 
-          <div className="flex gap-10 mt-2">
-            <div>Chọn dưa hấu ngon ngọt</div>
+          <div className="gap-10 mt-2 ">
+            {skillList.map(({ index, skills }) => (
+              <div key={index} className=" flex mb-1 items-center">
+                <div className="min-w-[120px] font-semibold italic capitalize">
+                  {index}:
+                </div>
+                <div className="capitalize">{skills.join(", ")}</div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </motion.div>

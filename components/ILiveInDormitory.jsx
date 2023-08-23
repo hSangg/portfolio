@@ -18,11 +18,14 @@ const ILiveInDormitory = () => {
       className="mb-[200px]"
     >
       <motion.div variants={textAnimate_1}>
-        <motion.div className="text-5xl font-bold text-center lg:text-left">
+        <motion.div className="text-5xl font-bold tex pb-2 t-center lg:text-left">
           Mình ở kí túc xá . (2021 - present)
         </motion.div>
 
-        <motion.p className="text-4xl mt-5" variants={textAnimate_2}>
+        <motion.p
+          className="text-4xl mt-5 text-justify "
+          variants={textAnimate_2}
+        >
           {" "}
           Mình chọn ở kí túc xá một phần là vì nó rẻ, phần còn lại là
           mình rất ham dui. Được nghe review là nếu thời sinh viên mà
@@ -35,7 +38,7 @@ const ILiveInDormitory = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="flex justify-center
       mb-[100px]
-      items-center gap-5 flex-col mt-5 sm:flex-row"
+      items-center gap-5 flex-col mt-5 lg:flex-row"
       >
         <motion.div className="w-full h-[700px] relative">
           <Image
@@ -66,8 +69,8 @@ const ILiveInDormitory = () => {
         </motion.h1>
 
         <motion.div
-          className="flex flex-col sm:flex-row sm:items-start
-        gap-10 items-center justify-center"
+          className="flex flex-col xl:flex-row items-center xl:items-start
+        gap-10 justify-center"
         >
           <motion.div className="text-4xl text-justify my-4 iCielBCOldStyle-Regular">
             Thật sự thì mình mới để ý đến sự hiện diện của những bạn
@@ -88,11 +91,11 @@ const ILiveInDormitory = () => {
               />
             </span>
           </motion.div>
-          <motion.div className="">
+          <motion.div className="w-[140vw] h-[94vw] sm:w-[70vw] sm:h-[47vw] xl:w-[30vw] xl:h-[20vw] relative shrink-0">
             <ImageCustom
               srcName="themeo.png"
-              w={"1600px"}
-              h={"1200px"}
+              layout="fill"
+              objectFit="contain"
             />
           </motion.div>
         </motion.div>
@@ -100,56 +103,25 @@ const ILiveInDormitory = () => {
         <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}
-          transition={{ staggerChildren: 1 }}
-          className="mt-10  w-full flex flex-wrap justify-center items-center gap-4 "
+          transition={{ staggerChildren: 0.5 }}
+          className="mt-10 flex flex-wrap justify-center items-center gap-4 "
         >
-          <motion.div className="" variants={imgAnimate}>
-            <Image
-              style={{ borderRadius: "20px" }}
-              src="/meo_1.jpg"
-              width={"700px"}
-              height={"700px"}
-              objectFit="cover"
-              loading="lazy"
-              alt="meo"
-            />
-          </motion.div>
-
-          <motion.div variants={imgAnimate}>
-            <Image
-              style={{ borderRadius: "20px" }}
-              src="/meo_2.jpg"
-              width={"700px"}
-              height={"700px"}
-              objectFit="cover"
-              alt="meo"
-              loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div variants={imgAnimate}>
-            <Image
-              style={{ borderRadius: "20px" }}
-              src="/meo_3.jpg"
-              width={"700px"}
-              height={"700px"}
-              objectFit="cover"
-              alt="meo"
-              loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div variants={imgAnimate}>
-            <Image
-              style={{ borderRadius: "20px" }}
-              src="/meo_4.jpg"
-              width={"700px"}
-              height={"700px"}
-              objectFit="cover"
-              loading="lazy"
-              alt="meo"
-            />
-          </motion.div>
+          {[1, 2, 3, 4].map((x) => (
+            <motion.div
+              className="w-[60vw] h-[60vw] lg:w-[30vw] lg:h-[30vw] relative"
+              key={x}
+              variants={imgAnimate}
+            >
+              <Image
+                style={{ borderRadius: "20px" }}
+                src={`/meo_${x}.jpg`}
+                layout="fill"
+                objectFit="cover"
+                loading="lazy"
+                alt="meo"
+              />
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </motion.div>
