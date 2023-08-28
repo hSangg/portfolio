@@ -1,4 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
+import { textAnimate_1 } from "../util/framer_motion";
 import Image from "next/image";
 const Music = () => {
   return (
@@ -32,6 +34,83 @@ const Music = () => {
             objectFit="contain"
             alt="caset"
           />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        transition={{ staggerChildren: 0.5 }}
+        className="grid grid-cols-2 xl:grid-cols-3  mt-20 gap-5"
+      >
+        <motion.div
+          variants={textAnimate_1}
+          className="music-item xl:col-span-2"
+        >
+          <iframe
+            className=""
+            src="https://open.spotify.com/embed/playlist/4ISyxeMOQgO46YQFupYpaj?utm_source=generator"
+            width="100%"
+            height="352"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <h1 className="text-2xl">
+            "Nhập môn sử dụng tai" playlist gồm những bài hát{" "}
+            <i>"bắn"</i> nhất mà mình từng nghe, những con track làm
+            nóng đôi tai, rất hype rất xuất
+          </h1>
+        </motion.div>
+
+        <motion.div variants={textAnimate_1} className="music-item">
+          <iframe
+            src="https://open.spotify.com/embed/album/1vi1WySkgPGkbR8NnQzlXu?utm_source=generator"
+            width="100%"
+            height="352"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <h1 className="text-2xl">
+            Track "Thôi em đừng đi" trong này mình đã loop demo nó quá
+            trời luôn, đến khi được release chính thức thì phải nói là
+            quá xuất, nguyên album từ nhịp bass, trống 808 rất trip
+            rất cuốn, một phần điểm cộng nữa là phần artwork từ nhà
+            Fustic quáy chá
+          </h1>
+        </motion.div>
+
+        <motion.div variants={textAnimate_1} className="music-item">
+          <iframe
+            src="https://open.spotify.com/embed/album/0LM9Cm43Sug8Hfpm84qmt6?utm_source=generator"
+            width="100%"
+            height="352"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <h1 className="text-2xl">
+            "Nhập môn sử dụng tai" playlist gồm những bài hát{" "}
+            <i>"bắn"</i> nhất mà mình từng nghe, những con track làm
+            nóng đôi tai, rất hype rất xuất
+          </h1>
+        </motion.div>
+
+        <motion.div variants={textAnimate_1} className="music-item">
+          <iframe
+            src="https://open.spotify.com/embed/album/6fJZeGzS6omKzAKIQDC9MC?utm_source=generator"
+            width="100%"
+            height="352"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <h1 className="text-2xl">
+            "Nhập môn sử dụng tai" playlist gồm những bài hát{" "}
+            <i>"bắn"</i> nhất mà mình từng nghe, những con track làm
+            nóng đôi tai, rất hype rất xuất
+          </h1>
         </motion.div>
       </motion.div>
     </motion.div>

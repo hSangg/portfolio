@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 import React from "react";
 import {
@@ -5,6 +6,8 @@ import {
   TransformWrapper,
 } from "react-zoom-pan-pinch";
 import { textAnimate } from "../util/framer_motion";
+import Image from "next/image";
+import BasicLayout from "./Layout/BasicLayout";
 
 const AboutMe = () => {
   return (
@@ -38,6 +41,7 @@ const AboutMe = () => {
           ông bà, cha mẹ mình từng sống những lúc khó khăn như nào.
         </motion.h1>
 
+        <br />
         <TransformWrapper initialScale={1} centerOnInit>
           <TransformComponent>
             {/* <motion.div className="w-full relative pt-[100%] ">
@@ -50,9 +54,24 @@ const AboutMe = () => {
                 className="w-full h-full top-0 left-0 rounded-2xl"
               />
             </motion.div> */}
-            <img src="/hoa_book.jpg" alt="" className="py-20 " />
+            <img
+              src="/hoa_book.jpg"
+              alt=""
+              className="scale-[1] sm:scale-[0.9]"
+            />
           </TransformComponent>
         </TransformWrapper>
+
+        <motion.div className="w-full relative pt-[100%] ">
+          <Image
+            src={"/bulbfish_notebookie_02.jpg"}
+            layout="fill"
+            loading="lazy"
+            objectFit="contain"
+            alt=""
+            className="w-full h-full top-0 left-0 rounded-2xl scale-[1] sm:scale-[0.9]"
+          />
+        </motion.div>
       </motion.div>
     </>
   );

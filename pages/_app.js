@@ -2,9 +2,10 @@ import Head from "next/head";
 import "../styles/globals.css";
 import NormalLayout from "../components/Layout/NormalLayout";
 import BasicLayout from "../components/Layout/BasicLayout";
+import { AuthContextProvider } from "../context/AuthContext";
 
 function MyApp({ Component, pageProps }) {
-  const GetLayout = Component.getLayout || BasicLayout;
+  const GetLayout = Component.getLayout ?? BasicLayout;
 
   return (
     <div>
@@ -40,9 +41,11 @@ function MyApp({ Component, pageProps }) {
           content="hhttps://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-1/290307587_129256073120108_5781583286109672362_n.jpg?stp=c0.19.240.240a_dst-jpg_p240x240&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=oCAjq7YzzsYAX8FhH19&_nc_ht=scontent.fsgn13-2.fna&oh=00_AT_Zv4jI5okcw8EICvjh9bnogxyDNf4uFjcBggxPnG5abQ&oe=63191377"
         />
       </Head>
-      <GetLayout>
-        <Component {...pageProps} />
-      </GetLayout>
+      <AuthContextProvider>
+        <GetLayout>
+          <Component {...pageProps} />
+        </GetLayout>
+      </AuthContextProvider>
     </div>
   );
 }

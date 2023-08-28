@@ -75,7 +75,25 @@ img {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 576px) {
+  .zoom {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .zoom {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 992px) {
+  .zoom {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 1200px) {
   .zoom {
     zoom: 1;
   }
@@ -125,6 +143,21 @@ img {
   display: none;
 }
 
+.img-suffle {
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.item {
+  gap: 10px;
+}
+
+.item:hover .img-suffle {
+  width: 20vw;
+  opacity: 1;
+}
+
 .fall-and-disapper {
   animation: fallAndDisapper 5s infinite ease-in-out;
   transform-origin: bottom;
@@ -158,4 +191,8 @@ img {
 .background-paper {
   background-image: url("../public/FW_Paper_White_01.jpg");
   background-size: cover;
+}
+
+.music-item {
+  @apply p-4 bg-white/10 rounded-lg flex flex-col gap-3;
 }

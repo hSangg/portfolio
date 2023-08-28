@@ -146,7 +146,7 @@ const Index = () => {
                 <div className="min-w-[120px] font-semibold italic capitalize">
                   {index}:
                 </div>
-                <div className="capitalize">{skills.join(", ")}</div>
+                <div className="capitalize">{skills.join(". ")}</div>
               </div>
             ))}
           </div>

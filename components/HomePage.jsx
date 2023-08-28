@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { MdEmail, MdPhone } from "react-icons/md";
 import {
@@ -10,22 +12,15 @@ import {
 } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
 import { whileHoverItem } from "../util/framer_motion";
-import Image from "next/image";
+import SuffleLetters from "./SuffleLetters";
 
 const HomePage = () => {
+  const router = useRouter();
+
   return (
-    <motion.div className="flex justify-evenly h-screen items-center relative">
+    <motion.div className="mb-[200px] flex flex-col justify-evenly h-screen items-center relative">
       <motion.div className="flex flex-col sm:flex-row sm:gap-[150px] justify-evenly h-screen items-center relative">
-        <motion.div
-          whileHover={{
-            scale: 1.5,
-            background: "black",
-            zIndex: 1,
-            boxShadow: "10px 10px 10px rgba(0, 0, 0, 1)",
-            transition: { type: "spring", bounce: 0.4, duration: 1 },
-          }}
-          className="sm:w-[800px] relative"
-        >
+        <motion.div className="sm:w-[800px] relative">
           <motion.div className="text-3xl  mt-[50px] sm:text-2xl">
             <div className="w-[600px] sm:w-full">
               Hy!{" "}
@@ -66,6 +61,9 @@ const HomePage = () => {
           >
             <motion.li
               variants={whileHoverItem}
+              onClick={() => {
+                window.open("https://github.com/hSangg", "_blank");
+              }}
               className="flex p-2 sm:p-0 items-center gap-2"
             >
               <VscGithubInverted size="25px" />
@@ -77,6 +75,12 @@ const HomePage = () => {
             </motion.li>
 
             <motion.li
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/m/in/cao-sang-b91b19226",
+                  "_blank"
+                );
+              }}
               variants={whileHoverItem}
               className="flex p-2 sm:p-0 items-center gap-2"
             >
@@ -89,11 +93,17 @@ const HomePage = () => {
             </motion.li>
 
             <motion.li
+              onClick={() => {
+                window.open(
+                  "https://www.facebook.com/sangcanhcut/",
+                  "_blank"
+                );
+              }}
               variants={whileHoverItem}
               className="flex p-2 sm:p-0 items-center gap-2"
             >
               <SiFacebook size="25px" />
-              <Link href="https://github.com/hSangg">
+              <Link href="https://www.facebook.com/sangcanhcut/">
                 <a target="_blank" className="hidden sm:block">
                   Sang_Hoai
                 </a>
@@ -101,6 +111,12 @@ const HomePage = () => {
             </motion.li>
 
             <motion.li
+              onClick={() => {
+                window.open(
+                  "https://www.behance.net/hoaisang",
+                  "_blank"
+                );
+              }}
               variants={whileHoverItem}
               className="flex p-2 sm:p-0 items-center gap-2"
             >
@@ -113,6 +129,12 @@ const HomePage = () => {
             </motion.li>
 
             <motion.li
+              onClick={() => {
+                window.open(
+                  "https://www.flickr.com/photos/sangcanhcut/",
+                  "_blank"
+                );
+              }}
               variants={whileHoverItem}
               className="flex p-2 sm:p-0 items-center gap-2"
             >
@@ -144,6 +166,12 @@ const HomePage = () => {
           <div className="font-semibold">hoai.sang050@gmail</div>
         </motion.li>
       </motion.ul>
+
+      <SuffleLetters
+        text01={"Hy! I'm"}
+        text02={"Sang"}
+        imageName={"Atmosphere.jpg"}
+      />
     </motion.div>
   );
 };

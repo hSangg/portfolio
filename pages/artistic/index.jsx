@@ -31,7 +31,9 @@ const Index = () => {
           objectFit="contain"
         />
 
-        <motion.p className="self-start">aoeifjoaeifoiaejs</motion.p>
+        {/* <motion.p className="self-center text-5xl mt-5 DFVN_afronaut">
+          tình tứ nơi đầy từ tính
+        </motion.p> */}
       </motion.div>
 
       <motion.div className="w-full flex justify-between mb-[50px]">
