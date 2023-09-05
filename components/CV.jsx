@@ -9,9 +9,9 @@ const CV = () => {
           router.push("/cv");
         }}
         src={"/cv.jpg"}
-        width={"1500px"}
-        height={"1500px"}
-        objectFit="cover"
+        width={"1000px"}
+        height={"1000px"}
+        objectFit="contain"
         className="scale-[0.8] lg:scale-75 xl:scale-50 cursor-pointer"
       />
     </>

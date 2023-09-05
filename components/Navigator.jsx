@@ -27,8 +27,8 @@ const Navigator = () => {
         className="
         absolute top-[20px] right-0
         inline-flex cursor-pointer
-      px-5 py-2 rounded-2xl items-center gap-5
-      text-5xl bg-gradient-to-r from-gray-900 z-10"
+      px-5 py-2  items-center gap-5
+      text-5xl bg-black  z-10"
       >
         <motion.figure>
           <Image
@@ -51,10 +51,10 @@ const Navigator = () => {
         }}
         style={{ x: x_design }}
         className="
-        absolute top-[90px] left-0
+        absolute top-[100px] left-0
         inline-flex cursor-pointer flex-row-reverse	
-        px-5 py-2 rounded-2xl items-center gap-5
-      text-5xl bg-gradient-to-l from-black z-10"
+        px-5 py-2 items-center gap-5
+      text-5xl bg-black z-10"
       >
         <Image
           src="/picture-iso-color.png"

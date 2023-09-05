@@ -1,10 +1,11 @@
 import CircularImageSlider from "../../components/CircularImageSlider";
+import MyProject from "../../components/MyProject";
 
 const Index = () => {
   return (
-    <>
-      <CircularImageSlider />
-    </>
+    <div className="h-screen">
+      <MyProject />
+    </div>
   );
 };
 

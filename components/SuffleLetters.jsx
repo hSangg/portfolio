@@ -17,7 +17,6 @@ const SuffleLetters = ({ text01, text02, imageName }) => {
         target.dataset.animating = true;
 
         const words = target.querySelectorAll(".word");
-        console.log(words);
         const originalWords = Array.from(words).map(
           (word) => word.textContent
         );
@@ -55,7 +54,7 @@ const SuffleLetters = ({ text01, text02, imageName }) => {
   }, []);
 
   return (
-    <motion.div className="item flex text-8xl sm:text-9xl">
+    <motion.div className="Joyride-Extended  item flex text-5xl sm:text-5xl">
       <motion.div className="word">{text01}</motion.div>
       <motion.div ref={ref} className="relative img-suffle ">
         <Image

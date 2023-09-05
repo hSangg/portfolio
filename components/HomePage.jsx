@@ -11,18 +11,21 @@ import {
   SiLinkedin,
 } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
-import { whileHoverItem } from "../util/framer_motion";
-import SuffleLetters from "./SuffleLetters";
 
 const HomePage = () => {
   const router = useRouter();
 
   return (
-    <motion.div className="mb-[200px] flex flex-col justify-evenly h-screen items-center relative">
-      <motion.div className="flex flex-col sm:flex-row sm:gap-[150px] justify-evenly h-screen items-center relative">
+    <motion.div className="flex flex-col justify-evenly items-center relative overflow-hidden">
+      <motion.div className="flex flex-col sm:flex-row justify-evenly sm:gap-24 mt-36 items-center relative">
         <motion.div className="sm:w-[800px] relative">
-          <motion.div className="text-3xl  mt-[50px] sm:text-2xl">
-            <div className="w-[600px] sm:w-full">
+          <motion.div
+            // initial={{ translateX: 500, opacity: 0 }}
+            // whileInView={{ translateX: 0, opacity: 1 }}
+            // transition={{ type: "spring", duration: 1 }}
+            className="  mt-[50px] text-2xl"
+          >
+            <div className="w-[300px] lg:w-full sm:text-left text-center">
               Hy!{" "}
               <span className="border-b-2 border-indigo-500 italic font-[700]">
                 Mình là Sang
@@ -49,29 +52,24 @@ const HomePage = () => {
           </motion.div>
         </motion.div>
 
-        <div>
+        <div className="mt-20 mb-20">
           <h1 className="font-bold text-3xl mb-10 sm:mb-5 text-center sm:text-left ">
             Following me
           </h1>
           <motion.ul
-            whileHover={"onHover"}
-            transition={{ staggerChildren: 0.2 }}
-            viewport={{ once: false, amount: 1 }}
-            className="flex flex-row sm:flex-col scale-150 sm:scale-100 text-[20px] gap-10 sm:gap-3 opacity-80"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1, transformOrigin: "top center" }}
+            transition={{ type: "spring", duration: 0.5 }}
+            className="flex flex-row sm:flex-col texl-xl opacity-80"
           >
             <motion.li
-              variants={whileHoverItem}
               onClick={() => {
                 window.open("https://github.com/hSangg", "_blank");
               }}
-              className="flex p-2 sm:p-0 items-center gap-2"
+              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
             >
               <VscGithubInverted size="25px" />
-              <Link href="https://github.com/hSangg">
-                <a target="_blank" className="hidden sm:block">
-                  hSangg
-                </a>
-              </Link>
+              <div className="hidden sm:block">hSangg</div>
             </motion.li>
 
             <motion.li
@@ -81,15 +79,11 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              variants={whileHoverItem}
-              className="flex p-2 sm:p-0 items-center gap-2"
+              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
             >
               <SiLinkedin size="25px" />
-              <Link href="https://www.linkedin.com/m/in/cao-sang-b91b19226">
-                <a target="_blank" className="hidden sm:block">
-                  Cao Sang
-                </a>
-              </Link>
+
+              <div className="hidden sm:block">Cao Sang</div>
             </motion.li>
 
             <motion.li
@@ -99,15 +93,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              variants={whileHoverItem}
-              className="flex p-2 sm:p-0 items-center gap-2"
+              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
             >
               <SiFacebook size="25px" />
-              <Link href="https://www.facebook.com/sangcanhcut/">
-                <a target="_blank" className="hidden sm:block">
-                  Sang_Hoai
-                </a>
-              </Link>
+              <div className="hidden sm:block">Sang_Hoai</div>
             </motion.li>
 
             <motion.li
@@ -117,15 +106,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              variants={whileHoverItem}
-              className="flex p-2 sm:p-0 items-center gap-2"
+              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
             >
               <SiBehance size="25px" />
-              <Link href="https://www.behance.net/hoaisang">
-                <a target="_blank" className="hidden sm:block">
-                  Cao Sang
-                </a>
-              </Link>
+              <div className="hidden sm:block">Cao Sang</div>
             </motion.li>
 
             <motion.li
@@ -135,15 +119,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              variants={whileHoverItem}
-              className="flex p-2 sm:p-0 items-center gap-2"
+              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
             >
               <SiFlickr size="25px" />
-              <Link href="https://www.flickr.com/photos/sangcanhcut/">
-                <a target="_blank" className="hidden sm:block">
-                  Sang Cao
-                </a>
-              </Link>
+              <div className="hidden sm:block">Sang Cao</div>
             </motion.li>
           </motion.ul>
         </div>
@@ -154,7 +133,7 @@ const HomePage = () => {
         viewport={{ once: false, amount: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
         className="absolute top-3  sm:left-0
-       bg-gradient-to-b from-indigo-500 p-4 rounded-lg"
+       bg-gradient-to-b from-indigo-500 p-4 rounded-lg overflow-hidden"
       >
         <motion.li className="flex mb-2 align-middle gap-2">
           <MdPhone size={20} color="white" />
@@ -166,12 +145,6 @@ const HomePage = () => {
           <div className="font-semibold">hoai.sang050@gmail</div>
         </motion.li>
       </motion.ul>
-
-      <SuffleLetters
-        text01={"Hy! I'm"}
-        text02={"Sang"}
-        imageName={"Atmosphere.jpg"}
-      />
     </motion.div>
   );
 };
