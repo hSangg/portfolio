@@ -8,15 +8,20 @@ const Index = ({ data }) => {
   console.log(resource);
   return (
     <div className="">
-      <ul className="bg-white text-black grid grid-cols-3">
-        {resource.map((item) => (
-          <li className="bg-black flex flex-col h-[550px] text-white rounded-[30px]">
+      <ul className="bg-white text-black grid gap-1 grid-cols-3">
+        {resource.map((item, index) => (
+          <li
+            key={index}
+            className="bg-black flex flex-col h-[550px] text-white rounded-[10px]"
+          >
             <div className="relative grow">
               <Image
                 src={item.preview_img_url}
                 layout="fill"
+                alt="item.name"
                 objectFit="cover"
-                style={{ borderRadius: "30px" }}
+                loading="lazy"
+                style={{ borderRadius: "10px" }}
               />
             </div>
 
