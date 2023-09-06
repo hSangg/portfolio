@@ -34,6 +34,11 @@
   src: url("../public/fonts/Benzin-Extra-Bold.ttf");
 }
 
+@font-face {
+  font-family: "OffBit-Dot";
+  src: url("../public/fonts/OffBit-Dot.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -150,6 +155,28 @@ img {
 }
 .Benzin-Extra-Bold {
   font-family: "Benzin-Extra-Bold";
+}
+
+.OffBit-Dot {
+  font-family: "OffBit-Dot";
+}
+
+@font-face {
+  font-family: "OffBit-101";
+  src: url("../public/fonts/OffBit-101.ttf");
+}
+
+.OffBit-101 {
+  font-family: "OffBit-101";
+}
+
+@font-face {
+  font-family: "OffBit-101Bold";
+  src: url("../public/fonts/OffBit-101Bold.ttf");
+}
+
+.OffBit-101Bold {
+  font-family: "OffBit-101Bold";
 }
 
 ::-webkit-scrollbar {

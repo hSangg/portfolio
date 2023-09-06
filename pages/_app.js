@@ -1,11 +1,9 @@
+import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import BasicLayout from "../components/Layout/BasicLayout";
 import { AuthContextProvider } from "../context/AuthContext";
-import { AnimatePresence, motion } from "framer-motion";
 import "../styles/globals.css";
-import { useRouter } from "next/router";
-import { useFollowPointer } from "../useHooks/useFollowPointer";
-import { useRef } from "react";
 
 function MyApp({ Component, pageProps }) {
   const GetLayout = Component.getLayout ?? BasicLayout;
@@ -15,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <title>Những điều Sang viết</title>
-        <meta name="title" content="Những điều Sang viết" />
+        <meta name="title" content="####" />
         <meta name="description" content="" />
 
         <meta property="og:type" content="website" />

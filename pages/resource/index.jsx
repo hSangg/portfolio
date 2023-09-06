@@ -8,11 +8,11 @@ const Index = ({ data }) => {
   console.log(resource);
   return (
     <div className="">
-      <ul className="bg-white text-black grid gap-1 grid-cols-3">
+      <ul className="grid gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
         {resource.map((item, index) => (
           <li
             key={index}
-            className="bg-black flex flex-col h-[550px] text-white rounded-[10px]"
+            className="bg-black flex flex-col h-[550px] text-white"
           >
             <div className="relative grow">
               <Image
@@ -21,7 +21,6 @@ const Index = ({ data }) => {
                 alt="item.name"
                 objectFit="cover"
                 loading="lazy"
-                style={{ borderRadius: "10px" }}
               />
             </div>
 
@@ -45,6 +44,14 @@ const Index = ({ data }) => {
           </li>
         ))}
       </ul>
+
+      <div className="bg-green-500 OffBit-101 p-2  text-black text-2xl fixed   bottom-10 right-10">
+        <h1 className=" OffBit-101Bold leading-6">BUY ME A COFFEE</h1>
+        <h1 className="leading-6">
+          MOMO:{" "}
+          <span className="bg-white OffBit-Dot ">0944552050</span>
+        </h1>
+      </div>
     </div>
   );
 };
