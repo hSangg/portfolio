@@ -53,7 +53,7 @@ const HomePage = () => {
         </motion.div>
 
         <div className="mt-20 mb-20">
-          <h1 className="font-bold text-3xl mb-10 sm:mb-5 text-center sm:text-left ">
+          <h1 className="font-bold text-2xl mb-2 text-center sm:text-left ">
             Following me
           </h1>
           <motion.ul

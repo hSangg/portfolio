@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 const Navigator = () => {
   const { scrollYProgress } = useScroll();
-  const x_aboutme = useTransform(scrollYProgress, [0, 1], [0, -400]);
-  const x_design = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  const x_aboutme = useTransform(scrollYProgress, [0, 1], [-400, 0]);
+  const x_design = useTransform(scrollYProgress, [0, 1], [400, 0]);
   const router = useRouter();
 
   const variants = {
@@ -14,7 +14,7 @@ const Navigator = () => {
   };
 
   return (
-    <motion.div className="relative h-screen min-w-[900px]">
+    <motion.div className="relative h-screen w-full">
       <motion.div
         initial="normal"
         whileHover="hover"
@@ -28,7 +28,7 @@ const Navigator = () => {
         absolute top-[20px] right-0
         inline-flex cursor-pointer
       px-5 py-2  items-center gap-5
-      text-5xl bg-black  z-10"
+      text-5xl bg-black  z-10 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg"
       >
         <motion.figure>
           <Image
@@ -38,7 +38,7 @@ const Navigator = () => {
             alt="location-iso-color"
           />
         </motion.figure>
-        <motion.p className="text-xl">Cuộc sống cụa mình ?</motion.p>
+        <motion.p className="text-lg">Cuộc sống cụa mình ?</motion.p>
       </motion.div>
 
       <motion.div
@@ -54,7 +54,7 @@ const Navigator = () => {
         absolute top-[100px] left-0
         inline-flex cursor-pointer flex-row-reverse	
         px-5 py-2 items-center gap-5
-      text-5xl bg-black z-10"
+      text-5xl bg-black z-10 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg"
       >
         <Image
           src="/picture-iso-color.png"
@@ -63,7 +63,7 @@ const Navigator = () => {
           alt="picture-iso-color"
         />
 
-        <motion.p className="text-xl">
+        <motion.p className="text-lg">
           Mình thích nghệ thuật ?
         </motion.p>
       </motion.div>
@@ -71,7 +71,7 @@ const Navigator = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="absolute h-[600px] left-0 right-0 z-0"
+        className="absolute h-[400px] left-0 right-0 z-0"
       >
         <Image
           src="/bg_crack.jpg"
@@ -79,7 +79,7 @@ const Navigator = () => {
           loading="lazy"
           layout="fill"
           alt="bg-cr"
-          objectFit="cover"
+          objectFit="contain"
         />
       </motion.div>
 

@@ -10,8 +10,6 @@ import { useRef } from "react";
 function MyApp({ Component, pageProps }) {
   const GetLayout = Component.getLayout ?? BasicLayout;
   const router = useRouter();
-  const ref = useRef();
-  const { x, y } = useFollowPointer(ref);
 
   return (
     <div>
@@ -55,24 +53,12 @@ function MyApp({ Component, pageProps }) {
               <Component {...pageProps} />
 
               <motion.div
-                ref={ref}
-                className="w-10 h-10 bg-green-400 rounded-full"
-                animate={{ x, y }}
-                transition={{
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 15,
-                  restDelta: 0.001,
-                }}
-              />
-              <motion.div
                 className="fixed inset-0 w-full z-50  bg-white origin-bottom"
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 0 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 exit={{ scaleY: 1 }}
               ></motion.div>
-
               <motion.div
                 className="fixed inset-0 w-full z-50  bg-white origin-top"
                 initial={{ scaleY: 1 }}

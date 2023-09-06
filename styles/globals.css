@@ -209,3 +209,11 @@ img {
 .music-item {
   @apply p-4 bg-white/10 rounded-lg flex flex-col gap-3;
 }
+
+.input-image-resource::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input-image-resource {
+  @apply before:content-['your-image']  before:inline-block before:w-full before:bg-green-500 before:text-xl before:text-center before:pb-1;
+}

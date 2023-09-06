@@ -54,7 +54,7 @@ const SuffleLetters = ({ text01, text02, imageName }) => {
   }, []);
 
   return (
-    <motion.div className="Joyride-Extended  item flex text-5xl sm:text-5xl">
+    <motion.div className="Joyride-Extended  item flex text-xl">
       <motion.div className="word">{text01}</motion.div>
       <motion.div ref={ref} className="relative img-suffle ">
         <Image

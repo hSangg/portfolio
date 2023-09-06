@@ -7,18 +7,18 @@ const Index = () => {
     <motion.div className="p-5">
       <motion.div className="background-paper rounded-md p-[50px] text-black wapper-cv">
         <div className="pb-2">
-          <h1 className="text-5xl font-[700] uppercase ">
+          <h1 className="text-2xl font-[700] uppercase ">
             Cao hoài sang
           </h1>
-          <h1 className="text-5xl  uppercase">
+          <h1 className="text-2xl uppercase">
             <b>it</b> developer
           </h1>
         </div>
 
-        <ul className="list mt-3 text-xl">
+        <ul className="list mt-3 text-base">
           {profileInfor.map(({ type, data }) => (
             <li className="flex" key={data}>
-              <div className="min-w-[180px]">
+              <div className="min-w-[120px]">
                 ✦ <i>{type}</i>:
               </div>
               <div className="font-semibold">{data}</div>
@@ -26,13 +26,13 @@ const Index = () => {
           ))}
         </ul>
 
-        <motion.div className="mt-5 text-xl">
-          <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
+        <motion.div className="mt-5 text-base">
+          <h1 className="font-bold uppercase pb-1 text-xl border-b-[10px] border-black/20 border-double">
             EDUCATION
           </h1>
 
-          <div className="flex gap-10 mt-2">
-            <h1 className="w-[150px] shrink-0">2021-Present</h1>
+          <div className="flex gap-5 mt-2">
+            <h1 className="shrink-0 w-16">2021-Present</h1>
             <div>
               University of Information Technology <br /> Majors:
               Information Systems <br /> GPA: ???
@@ -40,15 +40,13 @@ const Index = () => {
           </div>
         </motion.div>
 
-        <motion.div className="mt-5 text-xl">
-          <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
+        <motion.div className="mt-5 text-base">
+          <h1 className="font-bold uppercase pb-1 text-xl border-b-[10px] border-black/20 border-double">
             pet projects
           </h1>
 
-          <div className="flex gap-10 mt-2">
-            <h1 className="w-[150px] shrink-0 ">
-              Oct 2021 - Nov 2021
-            </h1>
+          <div className="flex gap-5 mt-2">
+            <h1 className="shrink-0 w-16 ">Oct 2021 - Nov 2021</h1>
             <div>
               <div>
                 <b>Blog Website</b> <br />
@@ -82,8 +80,8 @@ const Index = () => {
 
           <hr className="my-4 " />
 
-          <div className="flex gap-10 ">
-            <h1 className="w-[150px] shrink-0 ">
+          <div className="flex gap-5">
+            <h1 className="shrink-0 w-16 ">
               15 Mar 2023 - 1 Jul 2023{" "}
             </h1>
             <div>
@@ -135,8 +133,8 @@ const Index = () => {
           </div>
         </motion.div>
 
-        <motion.div className="mt-5 text-xl">
-          <h1 className="font-bold uppercase pb-1 text-3xl border-b-[10px] border-black/20 border-double">
+        <motion.div className="mt-5 text-base">
+          <h1 className="font-bold uppercase pb-1 text-xl border-b-[10px] border-black/20 border-double">
             Skills
           </h1>
 

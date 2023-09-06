@@ -2,13 +2,11 @@ import { motion, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import CV from "../components/CV";
 import HomePage from "../components/HomePage";
+import BasicLayout from "../components/Layout/BasicLayout";
+import MyProject from "../components/MyProject";
 import Navigator from "../components/Navigator";
 import SangText from "../components/SangText";
-import { useFollowPointer } from "../useHooks/useFollowPointer";
-import BasicLayout from "../components/Layout/BasicLayout";
 import SuffleLetters from "../components/SuffleLetters";
-import Folder from "../components/Folder";
-import MyProject from "../components/MyProject";
 
 const LIMIT_LOADING = 99;
 
