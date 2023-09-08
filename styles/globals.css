@@ -3,38 +3,38 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "iCielBC1676ModernMap";
-  src: url("../public/fonts/iCielBC1676ModernMap.ttf");
+  font-family: 'iCielBC1676ModernMap';
+  src: url('../public/fonts/iCielBC1676ModernMap.ttf');
 }
 
 @font-face {
-  font-family: "iCielBCOldstyle-Italic";
-  src: url("../public/fonts/iCielBCOldstyle-Italic.ttf");
+  font-family: 'iCielBCOldstyle-Italic';
+  src: url('../public/fonts/iCielBCOldstyle-Italic.ttf');
 }
 
 @font-face {
-  font-family: "iCielBCOldStyle-Regular";
-  src: url("../public/fonts/iCielBCOldStyle-Regular.ttf");
+  font-family: 'iCielBCOldStyle-Regular';
+  src: url('../public/fonts/iCielBCOldStyle-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Joyride-Extended";
-  src: url("../public/fonts/Joyride-Extended.otf");
+  font-family: 'Joyride-Extended';
+  src: url('../public/fonts/Joyride-Extended.otf');
 }
 
 @font-face {
-  font-family: "DFVN_afronaut";
-  src: url("../public/fonts/DFVN_afronaut.otf");
+  font-family: 'DFVN_afronaut';
+  src: url('../public/fonts/DFVN_afronaut.otf');
 }
 
 @font-face {
-  font-family: "Benzin-Extra-Bold";
-  src: url("../public/fonts/Benzin-Extra-Bold.ttf");
+  font-family: 'Benzin-Extra-Bold';
+  src: url('../public/fonts/Benzin-Extra-Bold.ttf');
 }
 
 @font-face {
-  font-family: "OffBit-Dot";
-  src: url("../public/fonts/OffBit-Dot.ttf");
+  font-family: 'OffBit-Dot';
+  src: url('../public/fonts/OffBit-Dot.ttf');
 }
 
 * {
@@ -45,7 +45,7 @@
 
 html,
 body {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   scroll-snap-type: y mandatory;
   background-color: black;
   color: white;
@@ -132,48 +132,57 @@ img {
 }
 
 .iCielBC1676ModernMap {
-  font-family: "iCielBC1676ModernMap";
+  font-family: 'iCielBC1676ModernMap';
 }
 
 .iCielBCOldstyle-Italic {
-  font-family: "iCielBCOldstyle-Italic";
+  font-family: 'iCielBCOldstyle-Italic';
 }
 
 .iCielBCOldStyle-Regular {
-  font-family: "iCielBCOldStyle-Regular";
+  font-family: 'iCielBCOldStyle-Regular';
 }
 
 .Joyride-Extended {
-  font-family: "Joyride-Extended";
+  font-family: 'Joyride-Extended';
 }
 
 .DFVN_afronaut {
-  font-family: "DFVN_afronaut";
+  font-family: 'DFVN_afronaut';
 }
 .Benzin-Extra-Bold {
-  font-family: "Benzin-Extra-Bold";
+  font-family: 'Benzin-Extra-Bold';
 }
 
 .OffBit-Dot {
-  font-family: "OffBit-Dot";
+  font-family: 'OffBit-Dot';
 }
 
 @font-face {
-  font-family: "OffBit-101";
-  src: url("../public/fonts/OffBit-101.ttf");
+  font-family: 'OffBit-101';
+  src: url('../public/fonts/OffBit-101.ttf');
 }
 
 .OffBit-101 {
-  font-family: "OffBit-101";
+  font-family: 'OffBit-101';
 }
 
 @font-face {
-  font-family: "OffBit-101Bold";
-  src: url("../public/fonts/OffBit-101Bold.ttf");
+  font-family: 'OffBit-101Bold';
+  src: url('../public/fonts/OffBit-101Bold.ttf');
 }
 
 .OffBit-101Bold {
-  font-family: "OffBit-101Bold";
+  font-family: 'OffBit-101Bold';
+}
+
+@font-face {
+  font-family: 'CODEINK-Regular';
+  src: url('../public/fonts/CODEINK-Regular.ttf');
+}
+
+.CODEINK-Regular {
+  font-family: 'CODEINK-Regular';
 }
 
 ::-webkit-scrollbar {
@@ -183,7 +192,8 @@ img {
 .img-suffle {
   width: 0;
   opacity: 0;
-  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.3s
+    cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .item {
@@ -196,7 +206,8 @@ img {
 }
 
 .fall-and-disapper {
-  animation: fallAndDisapper 5s infinite ease-in-out;
+  animation: fallAndDisapper 5s infinite
+    ease-in-out;
   transform-origin: bottom;
   transform: scale(0);
 }
@@ -226,7 +237,7 @@ img {
 }
 
 .background-paper {
-  background-image: url("../public/FW_Paper_White_01.jpg");
+  background-image: url('../public/FW_Paper_White_01.jpg');
   background-size: cover;
 }
 
