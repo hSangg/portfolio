@@ -32,7 +32,7 @@ const ResourceItem = ({
             alt='item.name'
             objectFit='cover'
             loading='lazy'
-            blurDataURL='https://placehold.co/600x400/FFF/png'
+            blurDataURL='https://placehold.co/600x400/000000/png'
             placeholder='blur'
           />
         </div>

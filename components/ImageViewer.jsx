@@ -9,8 +9,6 @@ const ImageViewer = ({
   name,
   onChange,
 }) => {
-  const [loading, setLoading] = useState(true)
-
   return (
     <motion.div className='fixed inset-0 bg-black/80'>
       <AnimatePresence>
@@ -24,7 +22,7 @@ const ImageViewer = ({
             layout='fill'
             objectFit='contain'
             src={image_link}
-            blurDataURL='https://placehold.co/600x400/FFF/png'
+            blurDataURL='https://placehold.co/600x400/000000/png'
             placeholder='blur'
           />
         </motion.div>

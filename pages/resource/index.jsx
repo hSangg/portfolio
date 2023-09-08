@@ -6,37 +6,30 @@ import { useEffect, useState } from 'react'
 import ResourceItem from '../../components/ResourceItem'
 import { db } from '../../firebase'
 const Index = ({ initialResouce }) => {
-  const [resource, setResource] = useState([
-    {
-      name: '???????',
-      preview_img_url:
-        'https://firebasestorage.googleapis.com/v0/b/portfolio-auth-f4751.appspot.com/o/image%2F371445923_799497542184005_4476843017739973972_n.jpg?alt=media&token=a67b7858-9fae-42a4-bfb3-29f9dddc63f4',
-      dowload_link: '??????',
-      preview_link: '',
-      price: '',
-    },
-  ])
+  // const [resource, setResource] = useState([
 
-  const getData = async () => {
-    const colref = collection(db, 'resource')
+  // ])
 
-    const querySnapshot = await getDocs(colref)
+  // const getData = async () => {
+  //   const colref = collection(db, 'resource')
 
-    const x = querySnapshot.docs.map((doc) =>
-      doc.data()
-    )
+  //   const querySnapshot = await getDocs(colref)
 
-    setResource(x)
-  }
+  //   const x = querySnapshot.docs.map((doc) =>
+  //     doc.data()
+  //   )
 
-  useEffect(() => {
-    getData()
-  }, [])
+  //   setResource(x)
+  // }
+
+  // useEffect(() => {
+  //   getData()
+  // }, [])
 
   return (
     <div className=''>
       <ul className='grid gap-10 sm:gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 m-2'>
-        {resource.map((item, index) => (
+        {initialResouce.map((item, index) => (
           <ResourceItem
             key={index}
             name={item.name}
@@ -64,3 +57,15 @@ const Index = ({ initialResouce }) => {
 }
 
 export default Index
+
+export const getStaticProps = async () => {
+  const colref = collection(db, 'resource')
+
+  const querySnapshot = await getDocs(colref)
+
+  const x = querySnapshot.docs.map((doc) =>
+    doc.data()
+  )
+
+  return { props: { initialResouce: x } }
+}
