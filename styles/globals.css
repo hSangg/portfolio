@@ -185,6 +185,15 @@ img {
   font-family: 'CODEINK-Regular';
 }
 
+@font-face {
+  font-family: 'Enigma-V2';
+  src: url('../public/fonts/Enigma-V2.otf');
+}
+
+.Enigma-V2 {
+  font-family: 'Enigma-V2';
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

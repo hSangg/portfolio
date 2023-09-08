@@ -10,7 +10,7 @@ import {
   collection,
 } from 'firebase/firestore'
 
-const addImage = () => {
+const AddImage = () => {
   const [image, setImage] = useState(null)
   const [dataUpload, setDataUpload] = useState({
     id: '',
@@ -65,4 +65,4 @@ const addImage = () => {
   )
 }
 
-export default addImage
+export default AddImage

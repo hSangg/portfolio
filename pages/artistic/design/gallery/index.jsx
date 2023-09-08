@@ -2,26 +2,65 @@ import {
   collection,
   getDocs,
 } from 'firebase/firestore'
-import { motion } from 'framer-motion'
+import {
+  AnimatePresence,
+  motion,
+} from 'framer-motion'
 import ImageGalleryItem from '../../../../components/ImageGalleryItem'
 import { db } from '../../../../firebase'
+import ImageViewer from '../../../../components/ImageViewer'
+import { useState } from 'react'
 
 const Index = ({ data }) => {
-  console.log(data)
+  const [imgClick, setImgClick] = useState(null)
+  const handleCloseImageViewer = () => {
+    setImgClick(null)
+  }
+
   return (
     <motion.div>
-      <motion.div>
-        <motion.div className='head'></motion.div>
-        <motion.div className='gallery grid grid-cols-10'>
+      <motion.div className='flex flex-col items-center'>
+        <motion.div className='flex flex-col items-center mb-20'>
+          <motion.div className='Enigma-V2 text-7xl'>
+            Image Gallery
+          </motion.div>
+          <motion.div className='CODEINK-Regular mt-3'>
+            Cao Hoai Sang
+          </motion.div>
+        </motion.div>
+
+        <motion.div className='grid grid-cols-8'>
           {data.map((item, index) => (
-            <ImageGalleryItem
+            <motion.div
               key={index}
-              image_link={item.image_link}
-              name={item.name}
-            />
+              onClick={() => {
+                setImgClick(item)
+              }}
+            >
+              <ImageGalleryItem
+                image_link={item.image_link}
+                name={item.name}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </motion.div>
+
+      <AnimatePresence>
+        {imgClick ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <ImageViewer
+              image_link={imgClick.image_link}
+              name={imgClick.name}
+              onChange={handleCloseImageViewer}
+            />
+          </motion.div>
+        ) : undefined}
+      </AnimatePresence>
     </motion.div>
   )
 }
