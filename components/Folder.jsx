@@ -26,6 +26,7 @@ const Folder = ({ name, src, mouseX, ...rest }) => {
         router.push(src);
       }}
       {...rest}
+      className="flex flex-col items-center gap-2"
     >
       <Image
         src={"/foldericon.png"}
@@ -35,7 +36,7 @@ const Folder = ({ name, src, mouseX, ...rest }) => {
         className="scale-[1.2]"
         loading="lazy"
       />
-      <motion.h1 className="text-center w-[150px] text-xl -translate-y-3 font-sem">
+      <motion.h1 className="text-center w-[100px] text-base -translate-y-3 font-sem">
         {name}
       </motion.h1>
     </motion.div>

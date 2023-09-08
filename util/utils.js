@@ -14,3 +14,7 @@ export const generateRandomString = (length) => {
   });
   return result;
 };
+
+export const openNewWindow = (link) => {
+  window.open(link, "__blank");
+};

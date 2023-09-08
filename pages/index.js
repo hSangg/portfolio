@@ -63,17 +63,19 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <HomePage />
           <MyProject />
-          <div className="flex flex-col items-center gap-10 border border-white py-24 rounded-[60px]">
-            <SuffleLetters
-              text01={"Hy! I'm"}
-              text02={"Sang"}
-              imageName={"Atmosphere.jpg"}
-            />
+          <div className="lg:flex lg:items-center mt-20">
+            <div className="flex flex-col items-center ">
+              <SuffleLetters
+                text01={"Hy! I'm"}
+                text02={"Sang"}
+                imageName={"Atmosphere.jpg"}
+              />
 
-            <SangText />
+              <SangText />
+            </div>
+
+            <CV />
           </div>
-
-          <CV />
           <Navigator />
         </div>
       </motion.div>

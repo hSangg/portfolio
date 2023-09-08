@@ -17,15 +17,15 @@ const HomePage = () => {
 
   return (
     <motion.div className="flex flex-col justify-evenly items-center relative overflow-hidden">
-      <motion.div className="flex flex-col sm:flex-row justify-evenly sm:gap-24 mt-36 items-center relative">
-        <motion.div className="sm:w-[800px] relative">
+      <motion.div className="flex flex-col lg:flex-row lg:gap-10 xl:gap-28 justify-evenly mt-36 items-center relative">
+        <motion.div className="lg:w-[800px] relative">
           <motion.div
             // initial={{ translateX: 500, opacity: 0 }}
             // whileInView={{ translateX: 0, opacity: 1 }}
             // transition={{ type: "spring", duration: 1 }}
-            className="  mt-[50px] text-2xl"
+            className="mt-[50px] text-2xl"
           >
-            <div className="w-[300px] lg:w-full sm:text-left text-center">
+            <div className="w-[300px] lg:w-full lg:text-left text-center">
               Hy!{" "}
               <span className="border-b-2 border-indigo-500 italic font-[700]">
                 Mình là Sang
@@ -53,23 +53,23 @@ const HomePage = () => {
         </motion.div>
 
         <div className="mt-20 mb-20">
-          <h1 className="font-bold text-2xl mb-2 text-center sm:text-left ">
+          <h1 className="font-bold text-2xl mb-2 text-center lg:text-left ">
             Following me
           </h1>
           <motion.ul
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1, transformOrigin: "top center" }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="flex flex-row sm:flex-col texl-xl opacity-80"
+            className="flex flex-row sm:gap-5 lg:gap-2 lg:flex-col texl-xl opacity-80"
           >
             <motion.li
               onClick={() => {
                 window.open("https://github.com/hSangg", "_blank");
               }}
-              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
+              className="flex p-2 lg:p-0 cursor-pointer items-center gap-2"
             >
               <VscGithubInverted size="25px" />
-              <div className="hidden sm:block">hSangg</div>
+              <div className="hidden lg:block">hSangg</div>
             </motion.li>
 
             <motion.li
@@ -79,11 +79,11 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
+              className="flex p-2 lg:p-0 cursor-pointer items-center gap-2"
             >
               <SiLinkedin size="25px" />
 
-              <div className="hidden sm:block">Cao Sang</div>
+              <div className="hidden lg:block">Cao Sang</div>
             </motion.li>
 
             <motion.li
@@ -93,10 +93,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
+              className="flex p-2 lg:p-0 cursor-pointer items-center gap-2"
             >
               <SiFacebook size="25px" />
-              <div className="hidden sm:block">Sang_Hoai</div>
+              <div className="hidden lg:block">Sang_Hoai</div>
             </motion.li>
 
             <motion.li
@@ -106,10 +106,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
+              className="flex p-2 lg:p-0 cursor-pointer items-center gap-2"
             >
               <SiBehance size="25px" />
-              <div className="hidden sm:block">Cao Sang</div>
+              <div className="hidden lg:block">Cao Sang</div>
             </motion.li>
 
             <motion.li
@@ -119,10 +119,10 @@ const HomePage = () => {
                   "_blank"
                 );
               }}
-              className="flex p-2 sm:p-0 cursor-pointer items-center gap-2"
+              className="flex p-2 lg:p-0 cursor-pointer items-center gap-2"
             >
               <SiFlickr size="25px" />
-              <div className="hidden sm:block">Sang Cao</div>
+              <div className="hidden lg:block">Sang Cao</div>
             </motion.li>
           </motion.ul>
         </div>
@@ -132,7 +132,7 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 60 }}
         viewport={{ once: false, amount: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="absolute top-3  sm:left-0
+        className="absolute top-3  lg:left-0
        bg-gradient-to-b from-indigo-500 p-4 rounded-lg overflow-hidden"
       >
         <motion.li className="flex mb-2 align-middle gap-2">

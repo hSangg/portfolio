@@ -71,7 +71,7 @@ const Navigator = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="absolute h-[400px] left-0 right-0 z-0"
+        className="absolute  h-[500px] left-10 right-10  z-0"
       >
         <Image
           src="/bg_crack.jpg"
@@ -79,7 +79,7 @@ const Navigator = () => {
           loading="lazy"
           layout="fill"
           alt="bg-cr"
-          objectFit="contain"
+          objectFit="cover"
         />
       </motion.div>
 

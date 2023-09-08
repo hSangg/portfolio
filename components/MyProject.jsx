@@ -1,6 +1,4 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Image from "next/image";
+import { motion, useMotionValue } from "framer-motion";
 import Folder from "./Folder";
 const dataFolder = [
   {
@@ -8,8 +6,8 @@ const dataFolder = [
     link: "",
   },
   {
-    name: "????????",
-    link: "???????",
+    name: "resource",
+    link: "/resource",
   },
   {
     name: "????????",
@@ -26,17 +24,23 @@ const MyProject = () => {
   let mouseX = useMotionValue(0);
 
   return (
-    <motion.div
-      onMouseMove={(e) => {
-        mouseX.set(e.pageX);
-        console.log(e.pageX);
-      }}
-      className="flex"
-    >
-      {dataFolder.map(({ name, link }, index) => (
-        <Folder mouseX={mouseX} name={name} src={link} key={index} />
-      ))}
-    </motion.div>
+    <div className="relative mb-20">
+      <motion.div
+        onMouseMove={(e) => {
+          mouseX.set(e.pageX);
+        }}
+        className="flex gap-2 sm:gap-10 absolute left-[50%] translate-x-[-50%]"
+      >
+        {dataFolder.map(({ name, link }, index) => (
+          <Folder
+            mouseX={mouseX}
+            name={name}
+            src={link}
+            key={index}
+          />
+        ))}
+      </motion.div>
+    </div>
   );
 };
 
