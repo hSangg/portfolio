@@ -186,6 +186,7 @@ const AddItem = () => {
             <div className=' bg-black/10 grow relative pb-[20%]'>
               {image && (
                 <Image
+                  alt='img'
                   src={URL.createObjectURL(image)}
                   objectFit='contain'
                   layout='fill'

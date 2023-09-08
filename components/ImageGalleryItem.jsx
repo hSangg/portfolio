@@ -3,16 +3,19 @@ import {
   findSecondLargest,
   handleImageName,
 } from '../util/utils'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const ImageGalleryItem = ({
   image_link,
   name,
 }) => {
-  findSecondLargest([1, 4, 3, 2, 6, 8])
   return (
     <div className='border min-h-[170px] border-white/20 p-2 flex flex-col items-center'>
       <div className=''>
         <Image
+          blurDataURL='https://placehold.co/600x400/000000/FFF'
+          placeholder='blur'
           objectFit='contain'
           width={100}
           height={100}

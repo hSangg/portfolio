@@ -8,6 +8,7 @@ const CV = () => {
         onClick={() => {
           router.push('/cv')
         }}
+        alt='img'
         src={'/cv-tape.jpg'}
         width={'1000px'}
         height={'1000px'}
