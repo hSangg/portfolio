@@ -1,21 +1,21 @@
-import { motion } from "framer-motion";
-import AboutMe from "../../components/AboutMe";
-import ILiveInDormitory from "../../components/ILiveInDormitory";
-import { BiChevronLeft } from "react-icons/bi";
-import { useRouter } from "next/router";
-import Back from "../../components/Back";
+import { motion } from 'framer-motion'
+import AboutMe from '../../components/AboutMe'
+import ILiveInDormitory from '../../components/ILiveInDormitory'
+import { BiChevronLeft } from 'react-icons/bi'
+import { useRouter } from 'next/router'
+import Back from '../../components/Back'
 
 const Index = () => {
-  const router = useRouter();
+  const router = useRouter()
   return (
-    <motion.div className="">
+    <motion.div className=''>
       <Back />
-      <motion.div className="pt-[500px] mx-[100px] lg:mx-[50px]">
+      <motion.div className='mx-[100px] lg:mx-[50px]'>
         <AboutMe />
         <ILiveInDormitory />
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
