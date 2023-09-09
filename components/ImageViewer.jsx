@@ -3,7 +3,7 @@ import {
   motion,
 } from 'framer-motion'
 import Image from 'next/image'
-import { useState } from 'react'
+
 const ImageViewer = ({
   image_link,
   name,
@@ -22,8 +22,8 @@ const ImageViewer = ({
             layout='fill'
             objectFit='contain'
             src={image_link}
-            blurDataURL='https://placehold.co/600x400/000000/png'
             placeholder='blur'
+            blurDataURL='https://fakeimg.pl/600x400/000000/d4d4d4?text=loading&font=bebas'
           />
         </motion.div>
       </AnimatePresence>
@@ -43,5 +43,4 @@ const ImageViewer = ({
     </motion.div>
   )
 }
-
 export default ImageViewer

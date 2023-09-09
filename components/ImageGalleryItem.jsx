@@ -11,7 +11,7 @@ const ImageGalleryItem = ({
   name,
 }) => {
   return (
-    <div className='border min-h-[170px] border-white/20 p-2 flex flex-col items-center'>
+    <div className='border border-white/20 p-2 flex flex-col items-center'>
       <div className=''>
         <Image
           blurDataURL='https://placehold.co/600x400/000000/png'

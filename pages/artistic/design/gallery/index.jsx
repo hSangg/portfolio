@@ -8,8 +8,8 @@ import {
 } from 'framer-motion'
 import ImageGalleryItem from '../../../../components/ImageGalleryItem'
 import { db } from '../../../../firebase'
-import ImageViewer from '../../../../components/ImageViewer'
 import { useState } from 'react'
+import ImageViewer from '../../../../components/ImageViewer'
 
 const Index = ({ data }) => {
   const [imgClick, setImgClick] = useState(null)
@@ -21,7 +21,7 @@ const Index = ({ data }) => {
     <motion.div>
       <motion.div className='flex flex-col items-center'>
         <motion.div className='flex flex-col items-center mb-20'>
-          <motion.div className='Enigma-V2 text-7xl'>
+          <motion.div className='Enigma-V2 mt-20 sm:mt-10 text-4xl sm:text-6xl  xl:text-7xl'>
             Image Gallery
           </motion.div>
           <motion.div className='CODEINK-Regular mt-3'>
@@ -29,7 +29,7 @@ const Index = ({ data }) => {
           </motion.div>
         </motion.div>
 
-        <motion.div className='grid grid-cols-8'>
+        <motion.div className='grid grid-cols-2 sm:grid-cols-5 xl:grid-cols-8'>
           {data.map((item, index) => (
             <motion.div
               key={index}
