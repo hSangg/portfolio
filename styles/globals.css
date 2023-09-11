@@ -194,6 +194,15 @@ img {
   font-family: 'Enigma-V2';
 }
 
+@font-face {
+  font-family: 'Enigma-V1';
+  src: url('../public/fonts/Enigma-V1.otf');
+}
+
+.Enigma-V1 {
+  font-family: 'Enigma-V1';
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

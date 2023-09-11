@@ -21,7 +21,7 @@ const Index = ({ data }) => {
     <motion.div>
       <motion.div className='flex flex-col items-center'>
         <motion.div className='flex flex-col items-center mb-20'>
-          <motion.div className='Enigma-V2 mt-20 sm:mt-10 text-4xl sm:text-6xl  xl:text-7xl'>
+          <motion.div className='Enigma-V1 mt-20 sm:mt-10 text-4xl sm:text-6xl  xl:text-7xl'>
             Image Gallery
           </motion.div>
           <motion.div className='CODEINK-Regular mt-3'>
