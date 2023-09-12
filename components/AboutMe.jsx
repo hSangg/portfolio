@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 import {
   TransformComponent,
   TransformWrapper,
 } from 'react-zoom-pan-pinch'
 import { textAnimate } from '../util/framer_motion'
-import Image from 'next/image'
-import BasicLayout from './Layout/BasicLayout'
 
 const AboutMe = () => {
   return (

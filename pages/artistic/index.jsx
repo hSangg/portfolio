@@ -94,7 +94,7 @@ const Index = () => {
             <Image
               alt=''
               loading='lazy'
-              src={'/03_Cover_Plastic.jpg'}
+              src={'/album-plastic.jpg'}
               width={'1000px'}
               height={'1000px'}
               objectFit='cover'
@@ -171,7 +171,7 @@ const Index = () => {
           <Image
             alt=''
             loading='lazy'
-            src={'/Print-Distortion-Effect.jpg'}
+            src={'/viet-nam-vol1.jpg'}
             width={'1000px'}
             height={'1000px'}
             objectFit='cover'

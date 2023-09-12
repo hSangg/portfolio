@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <motion.div className=''>
       <Back />
-      <motion.div className='mx-[100px] lg:mx-[50px]'>
+      <motion.div className='mx-[20px] lg:mx-[50px]'>
         <AboutMe />
         <ILiveInDormitory />
       </motion.div>
