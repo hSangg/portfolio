@@ -9,7 +9,6 @@ const ResourceItem = ({
   dowload_link,
   price,
 }) => {
-  console.log('1')
   return (
     <>
       <motion.li
