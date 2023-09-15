@@ -18,7 +18,6 @@ const AddImage = () => {
   const { isAuthor, googleSignIn, logOut } =
     UserAuth()
 
-  console.log(user)
   const handleUpload = async () => {
     if (image) {
       const name = image.name
