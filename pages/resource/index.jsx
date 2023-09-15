@@ -2,29 +2,27 @@ import {
   collection,
   getDocs,
 } from 'firebase/firestore'
-import { useEffect, useState } from 'react'
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import ResourceItem from '../../components/ResourceItem'
 import { db } from '../../firebase'
 const Index = ({ initialResouce }) => {
-  // const [resource, setResource] = useState([
+  const [total_amount, setTotal_amout] =
+    useState(0)
 
-  // ])
+  useEffect(() => {
+    let initData = 0
+    initialResouce.forEach((x) => {
+      initData += parseFloat(x.price)
+    })
 
-  // const getData = async () => {
-  //   const colref = collection(db, 'resource')
+    console.log(initData)
 
-  //   const querySnapshot = await getDocs(colref)
-
-  //   const x = querySnapshot.docs.map((doc) =>
-  //     doc.data()
-  //   )
-
-  //   setResource(x)
-  // }
-
-  // useEffect(() => {
-  //   getData()
-  // }, [])
+    setTotal_amout(initData)
+  }, [])
 
   return (
     <div className=''>
@@ -41,16 +39,28 @@ const Index = ({ initialResouce }) => {
         ))}
       </ul>
 
-      <div className='bg-green-500 OffBit-101 p-2  text-black text-2xl fixed   bottom-10 right-10'>
-        <h1 className=' OffBit-101Bold leading-6'>
-          BUY ME A COFFEE
-        </h1>
-        <h1 className='leading-6'>
-          MOMO:
-          <span className='bg-white OffBit-Dot '>
-            0944552050
+      <div className='fixed bottom-10 right-10'>
+        <span className='inline-flex mb-1 cursor-pointer items-center justify-center text-lg w-full rounded-full border border-slate-800 bg-black px-3 py-1  font-semibold text-slate-300 backdrop-blur-3xl'>
+          <span className='mr-1'>
+            toal resource cost:
           </span>
-        </h1>
+
+          <span className='bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent'>
+            ${total_amount}
+          </span>
+        </span>
+
+        <div className='bg-green-500 OffBit-101 p-2 text-center text-black text-2xl   '>
+          <h1 className=' OffBit-101Bold leading-6'>
+            BUY ME A COFFEE
+          </h1>
+          <h1 className='leading-6'>
+            MOMO:
+            <span className='bg-white OffBit-Dot '>
+              0944552050
+            </span>
+          </h1>
+        </div>
       </div>
     </div>
   )
