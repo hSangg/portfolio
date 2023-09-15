@@ -25,7 +25,7 @@ const EditItem = ({ data }) => {
     useState({})
   const [resourceList, setResourceList] =
     useState(data)
-  const { user, googleSignIn, logOut } =
+  const { isAuthor, googleSignIn, logOut } =
     UserAuth()
 
   useEffect(() => {}, [])
@@ -80,7 +80,7 @@ const EditItem = ({ data }) => {
 
   return (
     <AnimatePresence>
-      {user?.email == 'sangfc774@gmail.com' ? (
+      {isAuthor ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

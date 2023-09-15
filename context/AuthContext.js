@@ -16,14 +16,10 @@ const AuthContext = createContext()
 export const AuthContextProvider = ({
   children,
 }) => {
-  const [user, setUser] = useState(null)
+  const [isAuthor, setIsAuthor] = useState(false)
   const googleSignIn = async () => {
     const provider = new GoogleAuthProvider()
-    await signInWithRedirect(auth, provider).then(
-      (userCred) => {
-        setUser(userCred.user)
-      }
-    )
+    await signInWithRedirect(auth, provider)
   }
 
   const logOut = () => {
@@ -34,7 +30,12 @@ export const AuthContextProvider = ({
     const unsubscribe = onAuthStateChanged(
       auth,
       (currUser) => {
-        setUser(currUser)
+        if (
+          currUser?.email ===
+          'sangfc774@gmail.com'
+        ) {
+          setIsAuthor(true)
+        }
       }
     )
 
@@ -43,7 +44,7 @@ export const AuthContextProvider = ({
 
   return (
     <AuthContext.Provider
-      value={{ user, googleSignIn, logOut }}
+      value={{ isAuthor, googleSignIn, logOut }}
     >
       {children}
     </AuthContext.Provider>

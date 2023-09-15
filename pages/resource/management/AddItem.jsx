@@ -18,10 +18,8 @@ import {
 import { UserAuth } from '../../../context/AuthContext'
 
 const AddItem = () => {
-  const { user, googleSignIn, logOut } =
+  const { isAuthor, googleSignIn, logOut } =
     UserAuth()
-
-  console.log(user)
 
   const [dataUpload, setDataUpload] = useState({
     name: '',
@@ -72,14 +70,14 @@ const AddItem = () => {
   }
 
   return (
-    <AnimatePresence>
-      {user?.email === 'sangfc774@gmail.com' ? (
+    <>
+      {isAuthor ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className=' text-black '
+          className=' text-black'
         >
           <h1 className='text-2xl bg-white px-2 py-0 font-bold'>
             ADD NEW RESOURCE
@@ -219,7 +217,7 @@ const AddItem = () => {
           login
         </motion.button>
       )}
-    </AnimatePresence>
+    </>
   )
 }
 

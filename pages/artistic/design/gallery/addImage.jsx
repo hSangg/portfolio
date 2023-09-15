@@ -15,7 +15,7 @@ import {
 const AddImage = () => {
   const [image, setImage] = useState(null)
 
-  const { user, googleSignIn, logOut } =
+  const { isAuthor, googleSignIn, logOut } =
     UserAuth()
 
   console.log(user)
@@ -54,7 +54,7 @@ const AddImage = () => {
 
   return (
     <>
-      {user?.email === 'sangfc774@gmail.com' ? (
+      {isAuthor ? (
         <div>
           <input
             type='file'
