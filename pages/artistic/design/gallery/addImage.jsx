@@ -67,7 +67,7 @@ const AddImage = () => {
         </div>
       ) : (
         <motion.button
-          initial={{ y: -10, display: 'none' }}
+          initial={{ y: -11, display: 'none' }}
           animate={{
             y: 0,
             opacity: 1,
