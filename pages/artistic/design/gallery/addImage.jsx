@@ -12,10 +12,6 @@ import {
 
 const AddImage = () => {
   const [image, setImage] = useState(null)
-  const [dataUpload, setDataUpload] = useState({
-    id: '',
-    image_link: '',
-  })
 
   const handleUpload = async () => {
     if (image) {
