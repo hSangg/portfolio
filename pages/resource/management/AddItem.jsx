@@ -21,6 +21,8 @@ const AddItem = () => {
   const { user, googleSignIn, logOut } =
     UserAuth()
 
+  console.log(user)
+
   const [dataUpload, setDataUpload] = useState({
     name: '',
     preview_link: '',
@@ -76,6 +78,7 @@ const AddItem = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
           className=' text-black '
         >
           <h1 className='text-2xl bg-white px-2 py-0 font-bold'>
@@ -204,6 +207,7 @@ const AddItem = () => {
             opacity: 1,
             display: 'block',
           }}
+          transition={{ duration: 0.2 }}
           exit={{
             opacity: 0,
             y: -10,

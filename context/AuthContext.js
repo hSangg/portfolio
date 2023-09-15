@@ -5,21 +5,25 @@ const {
   useEffect,
 } = require('react')
 import {
-  FacebookAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signInWithPopup,
   signInWithRedirect,
   signOut,
 } from 'firebase/auth'
 import { auth } from '../firebase'
 const AuthContext = createContext()
 
-export const AuthContextProvider = ({ children }) => {
+export const AuthContextProvider = ({
+  children,
+}) => {
   const [user, setUser] = useState(null)
   const googleSignIn = async () => {
     const provider = new GoogleAuthProvider()
-    await signInWithRedirect(auth, provider)
+    await signInWithRedirect(auth, provider).then(
+      (userCred) => {
+        setUser(userCred.user)
+      }
+    )
   }
 
   const logOut = () => {
@@ -35,7 +39,7 @@ export const AuthContextProvider = ({ children }) => {
     )
 
     return () => unsubscribe()
-  }, [user])
+  }, [])
 
   return (
     <AuthContext.Provider
