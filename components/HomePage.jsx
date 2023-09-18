@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { MdEmail, MdPhone } from 'react-icons/md'
@@ -16,16 +15,11 @@ const HomePage = () => {
   const router = useRouter()
 
   return (
-    <motion.div className='flex flex-col justify-evenly items-center relative overflow-hidden'>
-      <motion.div className='flex flex-col lg:flex-row lg:gap-10 xl:gap-28 justify-evenly mt-36 items-center relative'>
-        <motion.div className='lg:w-[800px] relative'>
-          <motion.div
-            // initial={{ translateX: 500, opacity: 0 }}
-            // whileInView={{ translateX: 0, opacity: 1 }}
-            // transition={{ type: "spring", duration: 1 }}
-            className='mt-[50px] text-2xl'
-          >
-            <div className='w-[300px] lg:w-full lg:text-left text-center'>
+    <motion.div className='flex mb-20 flex-col justify-evenly items-center relative overflow-hidden'>
+      <motion.div className='flex flex-col lg:flex-row lg:gap-20 xl:gap-28 mt-16 items-center relative'>
+        <motion.div className=''>
+          <motion.div className='mt-[50px] text-xl'>
+            <div className='w-[300px] lg:text-left text-center'>
               Hy!{' '}
               <span className='border-b-2 border-indigo-500 italic font-[700]'>
                 Mình là Sang
@@ -58,7 +52,34 @@ const HomePage = () => {
           </motion.div>
         </motion.div>
 
-        <div className='mt-20 mb-20 px-4'>
+        <motion.div
+          className='hidden
+        lg:flex'
+        >
+          <motion.figure
+            animate={{
+              filter: 'brightness(1.6)',
+              y: [-10, 10],
+              scale: [1.07, 1.08],
+            }}
+            transition={{
+              type: 'spring',
+              repeat: Infinity,
+              duration: 1,
+              repeatType: 'reverse',
+            }}
+            className='bg-black'
+          >
+            <Image
+              src={'/ob-banner.jpg'}
+              objectFit='contain'
+              width={'500px'}
+              height={'500px'}
+            />
+          </motion.figure>
+        </motion.div>
+
+        <div className='mt-5'>
           <h1 className='font-bold text-2xl mb-2 text-center lg:text-left '>
             Following me
           </h1>
@@ -158,16 +179,23 @@ const HomePage = () => {
         viewport={{ once: false, amount: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
         className='absolute top-3  lg:left-0
-       bg-gradient-to-b from-indigo-500 p-4 rounded-lg overflow-hidden'
+       bg-gradient-to-b from-indigo-500 
+       p-4 rounded-lg overflow-hidden'
       >
-        <motion.li className='flex mb-2 align-middle gap-2'>
+        <motion.li
+          className='flex mb-2 
+        align-middle gap-2'
+        >
           <MdPhone size={20} color='white' />
           <div className='font-semibold'>
             +84944552050
           </div>
         </motion.li>
 
-        <motion.li className='flex mb-2 align-middle gap-2'>
+        <motion.li
+          className='flex mb-2 
+        align-middle gap-2'
+        >
           <MdEmail size={20} color='white' />
           <div className='font-semibold'>
             hoai.sang050@gmail

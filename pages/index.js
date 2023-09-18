@@ -77,8 +77,9 @@ export default function Home() {
       >
         <div className='flex flex-col items-center'>
           <HomePage />
+
           <MyProject />
-          <div className='lg:flex lg:items-center mt-20'>
+          <div className='lg:flex lg:items-center mt-10'>
             <div className='flex flex-col items-center '>
               <SuffleLetters
                 text01={"Hy! I'm"}

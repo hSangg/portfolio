@@ -10,6 +10,7 @@ const Folder = ({
   name,
   src,
   mouseX,
+  isClicked,
   ...rest
 }) => {
   const router = useRouter()
@@ -35,7 +36,7 @@ const Folder = ({
     <motion.div
       ref={ref}
       style={{ width }}
-      onClick={() => {
+      onDoubleClick={(e) => {
         router.push(src)
       }}
       {...rest}

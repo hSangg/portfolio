@@ -3,6 +3,7 @@ import {
   useMotionValue,
 } from 'framer-motion'
 import Folder from './Folder'
+import { useState } from 'react'
 const dataFolder = [
   {
     name: 'Tình yêu có nghĩa là gì',
@@ -25,6 +26,7 @@ const dataFolder = [
 
 const MyProject = () => {
   let mouseX = useMotionValue(0)
+  const [indexClick, setIndexClick] = useState(-1)
 
   return (
     <div className='relative mb-20'>
@@ -36,12 +38,21 @@ const MyProject = () => {
       >
         {dataFolder.map(
           ({ name, link }, index) => (
-            <Folder
-              mouseX={mouseX}
-              name={name}
-              src={link}
-              key={index}
-            />
+            <div
+              onClick={() => setIndexClick(index)}
+              className={`${
+                indexClick === index
+                  ? 'bg-blue-700/50'
+                  : 'bg-transparent'
+              } ?`}
+            >
+              <Folder
+                mouseX={mouseX}
+                name={name}
+                src={link}
+                key={index}
+              />
+            </div>
           )
         )}
       </motion.div>
