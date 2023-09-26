@@ -39,6 +39,7 @@ const MyProject = () => {
         {dataFolder.map(
           ({ name, link }, index) => (
             <div
+              key={index}
               onClick={() => setIndexClick(index)}
               className={`${
                 indexClick === index
@@ -50,7 +51,6 @@ const MyProject = () => {
                 mouseX={mouseX}
                 name={name}
                 src={link}
-                key={index}
               />
             </div>
           )

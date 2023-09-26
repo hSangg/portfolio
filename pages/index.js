@@ -7,10 +7,12 @@ import {
 import CV from '../components/CV'
 import HomePage from '../components/HomePage'
 import BasicLayout from '../components/Layout/BasicLayout'
+import NormalLayout from '../components/Layout/NormalLayout'
 import MyProject from '../components/MyProject'
 import Navigator from '../components/Navigator'
 import SangText from '../components/SangText'
 import SuffleLetters from '../components/SuffleLetters'
+import ScrollingHorizontal from '../components/ScrollingHorizontal'
 
 const LIMIT_LOADING = 99
 
@@ -77,7 +79,7 @@ export default function Home() {
       >
         <div className='flex flex-col items-center'>
           <HomePage />
-
+          <ScrollingHorizontal />
           <MyProject />
           <div className='lg:flex lg:items-center mt-10'>
             <div className='flex flex-col items-center '>
@@ -99,4 +101,4 @@ export default function Home() {
   )
 }
 
-Home.getLayout = BasicLayout
+Home.getLayout = NormalLayout

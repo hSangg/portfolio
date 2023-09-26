@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 import BasicLayout from '../components/Layout/BasicLayout'
 import { AuthContextProvider } from '../context/AuthContext'
 import '../styles/globals.css'
-
 function MyApp({ Component, pageProps }) {
   const GetLayout =
     Component.getLayout ?? BasicLayout

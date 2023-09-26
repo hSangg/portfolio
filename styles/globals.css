@@ -41,6 +41,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -80,36 +81,6 @@ img {
 .zoom {
   zoom: 1;
 }
-/* 
-@media screen {
-  .zoom {
-    zoom: 0.5;
-  }
-}
-
-@media (min-width: 576px) {
-  .zoom {
-    zoom: 0.5;
-  }
-}
-
-@media (min-width: 768px) {
-  .zoom {
-    zoom: 0.5;
-  }
-}
-
-@media (min-width: 992px) {
-  .zoom {
-    zoom: 0.8;
-  }
-}
-
-@media (min-width: 1200px) {
-  .zoom {
-    zoom: 1;
-  }
-} */
 
 .zoom-normal {
   zoom: 1;
@@ -181,6 +152,15 @@ img {
   src: url('../public/fonts/CODEINK-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Enigma-V1';
+  src: url('../public/fonts/Enigma-V1.otf');
+}
+
+.Enigma-V1 {
+  font-family: 'Enigma-V1';
+}
+
 .CODEINK-Regular {
   font-family: 'CODEINK-Regular';
 }
@@ -194,14 +174,27 @@ img {
   font-family: 'Enigma-V2';
 }
 
+/* ----------------------------------------------------------------------------- */
+
 @font-face {
-  font-family: 'Enigma-V1';
-  src: url('../public/fonts/Enigma-V1.otf');
+  font-family: 'PexelGrotesk';
+  src: url('../public/fonts/PexelGrotesk.otf');
+}
+.PexelGrotesk {
+  font-family: 'PexelGrotesk';
 }
 
-.Enigma-V1 {
-  font-family: 'Enigma-V1';
+/* ----------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'EurekaEndeavour';
+  src: url('../public/fonts/EurekaEndeavour.otf');
 }
+.EurekaEndeavour {
+  font-family: 'EurekaEndeavour';
+}
+
+/* ----------------------------------------------------------------------------- */
 
 ::-webkit-scrollbar {
   display: none;
