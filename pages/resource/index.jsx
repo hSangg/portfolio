@@ -19,10 +19,8 @@ const Index = ({ initialResouce }) => {
       initData += parseFloat(x.price)
     })
 
-    console.log(initData)
-
     setTotal_amout(initData)
-  }, [])
+  }, [total_amount])
 
   return (
     <div className=''>

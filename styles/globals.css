@@ -194,6 +194,14 @@ img {
   font-family: 'EurekaEndeavour';
 }
 
+@font-face {
+  font-family: 'Desirable_Calligraphy';
+  src: url('../public/fonts/Desirable_Calligraphy.otf');
+}
+.Desirable_Calligraphy {
+  font-family: 'Desirable_Calligraphy';
+}
+
 /* ----------------------------------------------------------------------------- */
 
 ::-webkit-scrollbar {
@@ -263,3 +271,4 @@ img {
 .input-image-resource {
   @apply before:content-['your-image']  before:inline-block before:w-full before:bg-green-500 before:text-xl before:text-center before:pb-1;
 }
+

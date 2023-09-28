@@ -49,7 +49,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className='bg-black '>
+    <motion.div className='bg-black '>
       <motion.div
         initial={{ x: 0, scaleY: 1 }}
         animate={{
@@ -77,7 +77,7 @@ export default function Home() {
         }}
         animate={{ opacity: visible ? 1 : 0 }}
       >
-        <div className='flex flex-col items-center'>
+        <motion.div className='flex flex-col items-center'>
           <HomePage />
           <ScrollingHorizontal />
           <MyProject />
@@ -95,9 +95,9 @@ export default function Home() {
             <CV />
           </div>
           <Navigator />
-        </div>
+        </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
 

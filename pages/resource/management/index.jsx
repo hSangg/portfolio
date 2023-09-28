@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const index = () => {
+const Index = () => {
   const router = useRouter()
 
   return (
@@ -32,4 +32,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

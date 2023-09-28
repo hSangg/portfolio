@@ -4,7 +4,6 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useRef } from 'react'
-import Image from 'next/image'
 const ScrollingHorizontal = () => {
   const refTarget = useRef(null)
   const { scrollYProgress } = useScroll({
