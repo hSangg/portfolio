@@ -39,7 +39,6 @@ const AddImage = () => {
             uploadTask.snapshot.ref
           ).then((url) => {
             addDoc(collection(db, 'imageLinks'), {
-              ...dataUpload,
               image_link: url,
               name,
             })
