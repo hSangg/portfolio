@@ -33,7 +33,10 @@ const PhoneNumber = () => {
       <h1 className='mb-2'>Chọn số điện thoại</h1>
       <div className='flex gap-2'>
         {new Array(10).fill(0).map((x, i) => (
-          <div className='flex flex-col gap-2'>
+          <div
+            key={i}
+            className='flex flex-col gap-2'
+          >
             <input
               readOnly
               value={val[i]}
