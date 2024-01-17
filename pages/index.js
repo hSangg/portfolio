@@ -77,24 +77,26 @@ export default function Home() {
         }}
         animate={{ opacity: visible ? 1 : 0 }}
       >
-        <motion.div className='flex flex-col items-center'>
+        <motion.div className='flex flex-col items-center w-full'>
           <HomePage />
           <ScrollingHorizontal />
-          <MyProject />
-          <div className='lg:flex lg:items-center mt-10'>
-            <div className='flex flex-col items-center '>
-              <SuffleLetters
-                text01={"Hy! I'm"}
-                text02={'Sang'}
-                imageName={'Atmosphere.jpg'}
-              />
+          <div className='w-full overflow-x-hidden'>
+            <MyProject />
+            <div className='lg:flex lg:items-center mt-10'>
+              <div className='flex flex-col items-center '>
+                <SuffleLetters
+                  text01={"Hy! I'm"}
+                  text02={'Sang'}
+                  imageName={'Atmosphere.jpg'}
+                />
 
-              <SangText />
+                <SangText />
+              </div>
+
+              <CV />
             </div>
-
-            <CV />
+            <Navigator />
           </div>
-          <Navigator />
         </motion.div>
       </motion.div>
     </motion.div>
