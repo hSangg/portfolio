@@ -3,7 +3,7 @@ import { useState } from 'react'
 const FullName = () => {
   const [val, setVal] = useState('0')
   return (
-    <div className='bg-slate-200 border-b-4 border-blue-400 inline-block p-4 mt-10 ml-20 rounded-2xl'>
+    <div className='bg-slate-200 border-b-4 border-blue-400 inline-block p-4 rounded-2xl'>
       <div className='flex flex-col flex-1 gap-5'>
         <div className='flex gap-4 items-center'>
           <label className='text-black'>

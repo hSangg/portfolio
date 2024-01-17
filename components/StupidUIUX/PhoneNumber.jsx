@@ -29,7 +29,7 @@ const PhoneNumber = () => {
     })
   }
   return (
-    <div className='mt-10 ml-10'>
+    <div className=''>
       <h1 className='mb-2'>Chọn số điện thoại</h1>
       <div className='flex gap-2'>
         {new Array(10).fill(0).map((x, i) => (
