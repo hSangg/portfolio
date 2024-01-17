@@ -192,7 +192,7 @@ const FullName = () => {
             <option>Đặng</option>
             <option>Thanh</option>
             <option>Thị</option>
-            <option>Ttrung</option>
+            <option>Trung</option>
             <option>Hoàng</option>
             <option>Phạm</option>
             <option>Vũ</option>
