@@ -4,15 +4,10 @@ import {
   useRef,
   useState,
 } from 'react'
-import CV from '../components/CV'
 import HomePage from '../components/HomePage'
-import BasicLayout from '../components/Layout/BasicLayout'
 import NormalLayout from '../components/Layout/NormalLayout'
-import MyProject from '../components/MyProject'
-import Navigator from '../components/Navigator'
-import SangText from '../components/SangText'
-import SuffleLetters from '../components/SuffleLetters'
 import ScrollingHorizontal from '../components/ScrollingHorizontal'
+import SuffleLetters from '../components/SuffleLetters'
 
 const LIMIT_LOADING = 99
 
@@ -80,23 +75,6 @@ export default function Home() {
         <motion.div className='flex flex-col items-center w-full'>
           <HomePage />
           <ScrollingHorizontal />
-          <div className='w-full overflow-x-hidden'>
-            <MyProject />
-            <div className='lg:flex lg:items-center mt-10'>
-              <div className='flex flex-col items-center '>
-                <SuffleLetters
-                  text01={"Hy! I'm"}
-                  text02={'Sang'}
-                  imageName={'Atmosphere.jpg'}
-                />
-
-                <SangText />
-              </div>
-
-              <CV />
-            </div>
-            <Navigator />
-          </div>
         </motion.div>
       </motion.div>
     </motion.div>
