@@ -1,14 +1,12 @@
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React from 'react'
 import { textAnimate } from '../util/framer_motion'
 
 const HomePage = () => {
-  const { scrollYProgress } = useScroll()
+  const openURL = (url) => {
+    window.open(url)
+  }
 
   return (
     <motion.div className='hidden lg:block h-[200vh] w-full mt-20 '>
@@ -41,7 +39,7 @@ const HomePage = () => {
               duration: 0.1,
             },
           }}
-          className='absolute top-[500px] right-10 w-[455px] h-[304px]'
+          className='absolute top-[400px] right-10 w-[455px] h-[304px]'
         >
           <Image
             alt=''
@@ -50,6 +48,44 @@ const HomePage = () => {
             objectFit='contain'
           />
         </motion.div>
+
+        <motion.div
+          whileInView={{
+            opacity: [0, 1],
+            scale: [0.2, 1],
+            transition: {
+              type: 'spring',
+              duration: 0.1,
+            },
+          }}
+          className='absolute top-[800px] flex flex-col'
+        >
+          <motion.h1
+            onClick={() =>
+              openURL(
+                'https://www.linkedin.com/in/cao-sang-b91b19226/'
+              )
+            }
+            whileHover={{
+              color: '#b91c1c',
+            }}
+            className='text-[150px] cursor-pointer leading-[140px]'
+          >
+            LINKEDIN
+          </motion.h1>
+          <motion.h1
+            onClick={() =>
+              openURL('https://github.com/hSangg')
+            }
+            whileHover={{
+              color: '#b91c1c',
+            }}
+            className='text-[150px] cursor-pointer leading-[140px]'
+          >
+            GITHUB
+          </motion.h1>
+        </motion.div>
+
         <motion.div
           className='z-10 pt-10 
           mix-blend-exclusion pointer-events-none CODEINK
