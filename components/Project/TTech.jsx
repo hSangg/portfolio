@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
 import Image from 'next/image'
 import { GrReactjs } from 'react-icons/gr'
 import { PiGithubLogoFill } from 'react-icons/pi'
@@ -9,16 +11,19 @@ import { GrStarOutline } from 'react-icons/gr'
 const TTech = () => {
   return (
     <div className='grid-cols-1 container mx-auto w-full grid lg:grid-cols-3 gap-4 mt-4'>
-      <div className='rounded-2xl col-span-2 bg-black flex flex-col gap-4 font-semibold uppercase mx-auto text-justify	text-xl'>
+      <div className='rounded-2xl col-span-1 lg:col-span-3 bg-black flex flex-col gap-4 font-semibold uppercase mx-auto text-justify text-xl'>
         <div>
           <Image
             width={50}
             height={50}
             src={'/project/logo_ttech.webp'}
           />
-          <h1 className='flex text-8xl'>
+          <motion.h1
+            whileInView={{ scale: [0.2, 1] }}
+            className='flex text-8xl'
+          >
             TTECH.{' '}
-          </h1>
+          </motion.h1>
         </div>
 
         <div>
@@ -79,14 +84,20 @@ const TTech = () => {
           <Image
             layout='fill'
             style={{
-              borderRadius: 40,
+              borderRadius: 12,
             }}
             src={'/project/ttech.webp'}
           />
         </div>
       </div>
 
-      <div className='text-justify z-10 rounded-2xl bg-white text-black p-2 text-xl'>
+      <motion.div
+        whileInView={{
+          opacity: [0.2, 1],
+          x: [20, 0],
+        }}
+        className='text-justify z-10 rounded-2xl bg-white text-black p-2 text-xl'
+      >
         <div className='flex items-center gap-2'>
           <div className='p-2 bg-black rounded-2xl'>
             <HiServer size={30} color='red' />
@@ -112,7 +123,7 @@ const TTech = () => {
             color='white'
           />
         </button>
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -129,10 +140,10 @@ const TTECH_CLIENT = [
 
 const TTECH_BACKEND = [
   'Send response to client.',
-  'Implement pagination for product list responses.',
+  'Implement <b>pagination</b> for product list responses.',
   'Enable search functionality with multiple conditions for products.',
-  'Using MySQL for data storage.',
-  'Integrate VNPAY for checkout in a Node.js application.',
+  'Using <b>MySQL</b> for data storage.',
+  '<b>Integrate VNPAY</b> for checkout in a Node.js application.',
 ]
 
 export function createMarkup(dirty) {

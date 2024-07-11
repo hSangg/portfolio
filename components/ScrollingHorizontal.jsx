@@ -39,7 +39,8 @@ const ScrollingHorizontal = () => {
             at Bosch. I have a strong background
             in Frontend, Backend &amp; Mobile
             development
-            <span>.-.</span>
+            <span> .-.</span> Below is my pet
+            projects
           </div>
         </motion.div>
       </div>
