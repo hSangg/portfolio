@@ -8,7 +8,7 @@ import { GrStarOutline } from 'react-icons/gr'
 
 const TTech = () => {
   return (
-    <div className='container mx-auto w-full grid grid-cols-3 gap-4 mt-4'>
+    <div className='grid-cols-1 container mx-auto w-full grid lg:grid-cols-3 gap-4 mt-4'>
       <div className='rounded-2xl col-span-2 bg-black flex flex-col gap-4 font-semibold uppercase mx-auto text-justify	text-xl'>
         <div>
           <Image
