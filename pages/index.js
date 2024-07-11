@@ -7,7 +7,7 @@ import {
 import HomePage from '../components/HomePage'
 import NormalLayout from '../components/Layout/NormalLayout'
 import ScrollingHorizontal from '../components/ScrollingHorizontal'
-import SuffleLetters from '../components/SuffleLetters'
+import Project from '../components/Project/Project'
 
 const LIMIT_LOADING = 99
 
@@ -75,6 +75,7 @@ export default function Home() {
         <motion.div className='flex flex-col items-center w-full'>
           <HomePage />
           <ScrollingHorizontal />
+          <Project />
         </motion.div>
       </motion.div>
     </motion.div>

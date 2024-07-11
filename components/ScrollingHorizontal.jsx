@@ -19,7 +19,7 @@ const ScrollingHorizontal = () => {
   return (
     <div
       ref={refTarget}
-      className='relative h-[3000vh] bg-white'
+      className='relative h-[500vh] bg-white'
     >
       <div
         className='sticky top-0 flex h-screen 
@@ -29,27 +29,18 @@ const ScrollingHorizontal = () => {
           style={{ x: xTrans }}
           className='flex text-black'
         >
-          <div className='text-cente whitespace-nowrap text-[100px]'>
-            Hy!{' '}
-            <span className='border-b-2 border-indigo-500 italic font-[700]'>
-              Mình là Sang
-            </span>
-            , mình hiện là một sinh viên của UIT
-            hay còn được gọi là{' '}
-            <span className='text-purple-500 font-[700]'>
-              TIU =)
-            </span>
-            , một nơi mà mình nhận lại những kiến
-            thức có thể phục vụ cho nghề nghiệp
-            tương lai của mình . Mình là người
-            hướng ngoại và khá thích đi ra ngoài
-            với bạn bè. Đây sẽ là nơi mà mình chia
-            sẽ{' '}
-            <span className='text-green-500'>
-              -
+          <div className='text-center whitespace-nowrap text-[100px]'>
+            <span className='Desirable_Calligraphy'>
+              ⁘
             </span>{' '}
-            về những thứ xung quanh mình{' '}
-            <span>.-. </span>
+            <span>Hy! </span>{' '}
+            <span className='border-b-2 border-indigo-500 italic font-[700]'>
+              My name is <span>Sang</span>
+            </span>
+            , I'm a software developer intern at
+            Bosch. I have a strong background in
+            Frontend, Backend & Mobile development
+            <span>.-.</span>
           </div>
         </motion.div>
       </div>
