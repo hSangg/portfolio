@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { GrStarOutline } from 'react-icons/gr'
 import { motion } from 'framer-motion'
 import { openURL } from '../../util/utils'
+import { textAnimate } from '../../util/framer_motion'
 
 function WeatherAQI() {
   return (
@@ -18,8 +19,13 @@ function WeatherAQI() {
           <h1 className='text-3xl uppercase mt-8 font-semibold'>
             Responsibilities
           </h1>
-          <ul className='list-disc mt-2 text-2xl text-justify'>
-            <li>
+          <motion.ul
+            initial={'offscreen'}
+            whileInView={'onscreen'}
+            transition={{ staggerChildren: 0.05 }}
+            className='list-disc mt-2 text-2xl text-justify'
+          >
+            <motion.li variants={textAnimate}>
               Research methodology of{' '}
               <span className='AccanthisADFStdNo3-BoldItalic'>
                 GaussNewton Nonlinear Method
@@ -28,35 +34,46 @@ function WeatherAQI() {
               <span className='AccanthisADFStdNo3-BoldItalic'>
                 Gated Recurrent Unit (GRU).
               </span>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={textAnimate}>
               Implement both method in Python
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li variants={textAnimate}>
               Apply them to our dataset about
               three big cities in Vietnam: Ha Noi,
               Viet Tri and Da Nang
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
 
         <div>
           <h1 className='text-3xl uppercase mt-8 font-semibold'>
             Skills
           </h1>
-          <ul className='list-disc mt-2 text-2xl '>
-            <li>Latex </li>
-            <li>Python, Sklearn</li>
-            <li>
+          <motion.ul
+            initial={'offscreen'}
+            whileInView={'onscreen'}
+            transition={{ staggerChildren: 0.05 }}
+            className='list-disc mt-2 text-2xl '
+          >
+            <motion.li variants={textAnimate}>
+              Latex{' '}
+            </motion.li>
+            <motion.li variants={textAnimate}>
+              Python, Sklearn
+            </motion.li>
+            <motion.li variants={textAnimate}>
               Jupiter notebook, Google colab
-            </li>
-            <li>Analysis data</li>
-            <li>
+            </motion.li>
+            <motion.li variants={textAnimate}>
+              Analysis data
+            </motion.li>
+            <motion.li variants={textAnimate}>
               Model evaluation using MAPE, MAE,
               MSE
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
 
         <div
