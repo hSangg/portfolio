@@ -35,10 +35,9 @@ const ScrollingHorizontal = () => {
             <span className='border-b-2 border-indigo-500 italic font-[700]'>
               My name is <span>Sang</span>
             </span>
-            , I&apos;m a software developer intern
-            at Bosch. I have a strong background
-            in Frontend, Backend &amp; Mobile
-            development
+            , I&apos;m a software developer. I
+            have a strong background in Frontend,
+            Backend &amp; Mobile development
             <span> .-.</span> Below is my pet
             projects
           </div>
