@@ -14,6 +14,7 @@ const TTech = () => {
       <div className='rounded-2xl col-span-1 lg:col-span-3 bg-black flex flex-col gap-4 font-semibold uppercase mx-auto text-justify text-xl'>
         <div>
           <Image
+            alt='logo ttech app'
             width={50}
             height={50}
             src={'/project/logo_ttech.webp'}
@@ -83,6 +84,7 @@ const TTech = () => {
         <div>
           <Image
             layout='fill'
+            alt='demo ttech app'
             style={{
               borderRadius: 12,
             }}

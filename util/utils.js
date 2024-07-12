@@ -25,3 +25,7 @@ export const handleImageName = (name) => {
   const imageNameToArray = name.split('.')
   return imageNameToArray[0]
 }
+
+export const openURL = (url) => {
+  window.open(url)
+}

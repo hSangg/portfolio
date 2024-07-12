@@ -13,6 +13,7 @@ function Booking() {
     <div className=' grid-cols-1 container mx-auto w-full grid lg:grid-cols-3 gap-4 mt-24'>
       <div className='relative'>
         <Image
+          alt='demo image booking app'
           layout='fill'
           style={{ borderRadius: 12 }}
           src={'/project/booking.webp'}

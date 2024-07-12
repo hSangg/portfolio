@@ -8,6 +8,8 @@ import HomePage from '../components/HomePage'
 import NormalLayout from '../components/Layout/NormalLayout'
 import ScrollingHorizontal from '../components/ScrollingHorizontal'
 import Project from '../components/Project/Project'
+import { Skills } from '../components/Skills'
+import { Collaboration } from '../components/Collaboration/Collaboration'
 
 const LIMIT_LOADING = 99
 
@@ -76,6 +78,8 @@ export default function Home() {
           <HomePage />
           <ScrollingHorizontal />
           <Project />
+          <Collaboration />
+          <Skills />
         </motion.div>
       </motion.div>
     </motion.div>
