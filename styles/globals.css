@@ -37,6 +37,11 @@
   src: url('../public/fonts/OffBit-Dot.ttf');
 }
 
+@font-face {
+  font-family: 'AccanthisADFStdNo3-BoldItalic';
+  src: url('../public/fonts/AccanthisADFStdNo3-BoldItalic.otf');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -159,6 +164,10 @@ img {
 
 .Enigma-V1 {
   font-family: 'Enigma-V1';
+}
+
+.AccanthisADFStdNo3-BoldItalic {
+  font-family: 'AccanthisADFStdNo3-BoldItalic';
 }
 
 .CODEINK-Regular {
