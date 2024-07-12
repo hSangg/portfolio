@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { GrStarOutline } from 'react-icons/gr'
 import { motion } from 'framer-motion'
@@ -6,6 +6,16 @@ import { openURL } from '../../util/utils'
 import { textAnimate } from '../../util/framer_motion'
 
 function WeatherAQI() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // Fake loading time of 2 seconds
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className='mt-5 grid grid-cols-1 lg:grid-cols-2 gap-4'>
       <div>
@@ -38,7 +48,6 @@ function WeatherAQI() {
             <motion.li variants={textAnimate}>
               Implement both method in Python
             </motion.li>
-
             <motion.li variants={textAnimate}>
               Apply them to our dataset about
               three big cities in Vietnam: Ha Noi,
@@ -64,10 +73,10 @@ function WeatherAQI() {
               Python, Sklearn
             </motion.li>
             <motion.li variants={textAnimate}>
-              Jupiter notebook, Google colab
+              Jupyter notebook, Google colab
             </motion.li>
             <motion.li variants={textAnimate}>
-              Analysis data
+              Data analysis
             </motion.li>
             <motion.li variants={textAnimate}>
               Model evaluation using MAPE, MAE,
@@ -103,15 +112,19 @@ function WeatherAQI() {
         }}
         className=''
       >
-        <Image
-          src={'/collaboration/paper.webp'}
-          alt=''
-          title=''
-          width='75.7885763%'
-          height='100%'
-          layout='responsive'
-          objectFit='contain'
-        />
+        {isLoading ? (
+          <div className='w-full h-96 bg-gray-300 animate-pulse'></div>
+        ) : (
+          <Image
+            src={'/collaboration/paper.webp'}
+            alt=''
+            title=''
+            width='75.7885763%'
+            height='100%'
+            layout='responsive'
+            objectFit='contain'
+          />
+        )}
       </motion.div>
     </div>
   )

@@ -1,24 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
 import Image from 'next/image'
-import { GrReactjs } from 'react-icons/gr'
+import {
+  GrReactjs,
+  GrStarOutline,
+} from 'react-icons/gr'
 import { PiGithubLogoFill } from 'react-icons/pi'
 import { HiServer } from 'react-icons/hi2'
 
-import { GrStarOutline } from 'react-icons/gr'
-
 const TTech = () => {
+  const [isLogoLoading, setIsLogoLoading] =
+    useState(true)
+  const [
+    isDemoImageLoading,
+    setIsDemoImageLoading,
+  ] = useState(true)
+
+  useEffect(() => {
+    const logoTimer = setTimeout(() => {
+      setIsLogoLoading(false)
+    }, 2000) // Fake loading time of 2 seconds
+
+    const demoImageTimer = setTimeout(() => {
+      setIsDemoImageLoading(false)
+    }, 2000) // Fake loading time of 2 seconds
+
+    return () => {
+      clearTimeout(logoTimer)
+      clearTimeout(demoImageTimer)
+    }
+  }, [])
+
   return (
-    <div className='grid-cols-1 container mx-auto w-full grid lg:grid-cols-3 gap-4 mt-4'>
+    <div className='container mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4'>
       <div className='rounded-2xl col-span-1 lg:col-span-3 bg-black flex flex-col gap-4 font-semibold uppercase mx-auto text-justify text-xl'>
         <div>
-          <Image
-            alt='logo ttech app'
-            width={50}
-            height={50}
-            src={'/project/logo_ttech.webp'}
-          />
+          {isLogoLoading ? (
+            <div className='w-12 h-12 bg-gray-300 animate-pulse rounded-full'></div>
+          ) : (
+            <Image
+              alt='logo ttech app'
+              width={50}
+              height={50}
+              src={'/project/logo_ttech.webp'}
+            />
+          )}
           <motion.h1
             whileInView={{ scale: [0.2, 1] }}
             className='flex text-8xl'
@@ -81,16 +107,18 @@ const TTech = () => {
       </div>
 
       <div className='relative'>
-        <div>
-          <Image
-            layout='fill'
-            alt='demo ttech app'
-            style={{
-              borderRadius: 12,
-            }}
-            src={'/project/ttech.webp'}
-          />
-        </div>
+        {isDemoImageLoading ? (
+          <div className='w-full h-96 bg-gray-300 animate-pulse rounded-2xl'></div>
+        ) : (
+          <div>
+            <Image
+              layout='fill'
+              alt='demo ttech app'
+              style={{ borderRadius: 12 }}
+              src={'/project/ttech.webp'}
+            />
+          </div>
+        )}
       </div>
 
       <motion.div

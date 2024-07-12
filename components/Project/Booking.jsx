@@ -1,5 +1,9 @@
 import Image from 'next/image'
-import { default as React } from 'react'
+import {
+  default as React,
+  useState,
+  useEffect,
+} from 'react'
 
 import {
   GrReactjs,
@@ -8,16 +12,31 @@ import {
 import { PiGithubLogoFill } from 'react-icons/pi'
 
 import { GrStarOutline } from 'react-icons/gr'
+
 function Booking() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // Fake loading time of 2 seconds
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <div className=' grid-cols-1 container mx-auto w-full grid lg:grid-cols-3 gap-4 mt-24'>
+    <div className='container mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-4 mt-24'>
       <div className='relative'>
-        <Image
-          alt='demo image booking app'
-          layout='fill'
-          style={{ borderRadius: 12 }}
-          src={'/project/booking.webp'}
-        />
+        {isLoading ? (
+          <div className='w-full h-96 bg-gray-300 animate-pulse rounded-2xl'></div>
+        ) : (
+          <Image
+            alt='demo image booking app'
+            layout='fill'
+            style={{ borderRadius: 12 }}
+            src={'/project/booking.webp'}
+          />
+        )}
       </div>
       <div>
         <h1 className='text-8xl font-semibold text-center'>
@@ -124,6 +143,7 @@ const TTECH_SERVER = [
   'Enable search functionality with multiple conditions for rooms.',
   'Using Mongodb for data storage.',
 ]
+
 export function createMarkup(dirty) {
   return { __html: dirty }
 }
